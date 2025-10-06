@@ -1,0 +1,38 @@
+/* Reinitialisation navigateur */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+.section_title {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    font-size: 48px;
+}
+
+.film_categ {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.film_vignette {
+    margin: 0.1em;
+}
+
+#cat_autres {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+
+.choix_categorie {
+    border-color: black;
+    border: 1px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    font-size: 36px;
+}
