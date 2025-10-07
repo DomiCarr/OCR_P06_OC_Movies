@@ -28,9 +28,9 @@ header {
     margin-left: 40px;
     font-family: "Oswald", sans-serif;
     color: white;
+    /* Light */
     font-size: 40px;
     font-weight: 300;
-    /* Light */
 }
 
 main {
@@ -38,36 +38,52 @@ main {
     flex-direction: column;
 }
 
-.mf {
+.bloc_film {
     display: flex;
     flex-direction: column;
 }
 
-.mf_vignette {
+.bf_titre,
+.bf_vignette_desc_titre {
+    font-family: "Oswald", sans-serif;
+    color: black;
+    /* Semi-bold */
+    font-size: 48px;
+    font-weight: 600;
+}
+
+.bf_vignette {
+    padding: 10px;
     display: flex;
     flex-direction: row;
+    border-style: solid;
+    border-color: black;
 }
 
-.extralight-text {
+.bf_vignette_desc {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.bf_vignette_desc_texte {
+    align-self: center;
     font-family: "Oswald", sans-serif;
-    font-weight: 200;
+    color: black;
     /* ExtraLight */
+    font-size: 28px;
+    font-weight: 200;
 }
 
-.light-text {
+.bf_vignette_desc_bouton {
+    margin-left: auto;
+    background-color: #FA0B0B;
+    border-radius: 10px;
+    padding: 10px;
     font-family: "Oswald", sans-serif;
-    font-weight: 300;
-    /* Light */
-}
-
-.medium-text {
-    font-family: "Oswald", sans-serif;
-    font-weight: 500;
+    color: white;
     /* Medium */
-}
-
-.semibold-text {
-    font-family: "Oswald", sans-serif;
-    font-weight: 600;
-    /* SemiBold */
+    font-size: 24px;
+    font-weight: 500;
 }
