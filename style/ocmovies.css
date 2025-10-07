@@ -28,8 +28,8 @@ header {
     margin-left: 40px;
     font-family: "Oswald", sans-serif;
     color: white;
-    /* Light */
     font-size: 40px;
+    /* Light */
     font-weight: 300;
 }
 
@@ -47,8 +47,8 @@ main {
 .bf_vignette_desc_titre {
     font-family: "Oswald", sans-serif;
     color: black;
-    /* Semi-bold */
     font-size: 48px;
+    /* Semi-bold */
     font-weight: 600;
 }
 
@@ -71,8 +71,8 @@ main {
     align-self: center;
     font-family: "Oswald", sans-serif;
     color: black;
-    /* ExtraLight */
     font-size: 28px;
+    /* ExtraLight */
     font-weight: 200;
 }
 
@@ -83,7 +83,54 @@ main {
     padding: 10px;
     font-family: "Oswald", sans-serif;
     color: white;
-    /* Medium */
     font-size: 24px;
+    /* Medium */
     font-weight: 500;
+}
+
+.bf_mosaik {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.tuile {
+    margin: 16px;
+    position: relative;
+    height: 252px;
+    width: 247px;
+}
+
+.tuile_bloctexte {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    left: 0;
+    top: 40px;
+    padding: 15px;
+    height: 100px;
+    width: 251px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.tuile_bloctexte_texte {
+    font-family: "Oswald", sans-serif;
+    color: white;
+    /* Semi-bold */
+    font-size: 24px;
+    font-weight: 600;
+    align-self: flex-start;
+}
+
+.tuile_bloctexte_button {
+    font-family: "Oswald", sans-serif;
+    color: white;
+    font-size: 14px;
+    /* Medium */
+    font-weight: 500;
+    background-color: black;
+    border-radius: 25px;
+    padding: 5px;
+    align-self: flex-end;
 }
