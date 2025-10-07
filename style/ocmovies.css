@@ -12,3 +12,18 @@ body {
     margin-left: 110px;
     margin-right: 110px;
 }
+
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #61787F;
+}
+
+.header_pic {
+    margin: 15px;
+}
+
+.header_text {
+    margin-left: 40px;
+}
