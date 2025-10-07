@@ -38,7 +38,15 @@ main {
     flex-direction: column;
 }
 
+.mf {
+    display: flex;
+    flex-direction: column;
+}
 
+.mf_vignette {
+    display: flex;
+    flex-direction: row;
+}
 
 .extralight-text {
     font-family: "Oswald", sans-serif;
