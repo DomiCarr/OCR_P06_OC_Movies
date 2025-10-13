@@ -1,5 +1,5 @@
 /* Desktop (789px → ) */
-@media (min-width: 620px) and (max-width:1024px) {
+@media (min-width: 789px) and (max-width:1024px) {
 
     /* Reinitialisation navigateur */
     * {

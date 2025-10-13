@@ -1,5 +1,5 @@
 /* Desktop (789px → ) */
-@media (max-width: 619px) {
+@media (max-width: 788px) {
 
     /* Reinitialisation navigateur */
     * {
@@ -58,7 +58,7 @@
     .bf_vignette {
         padding: 10px;
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         border-style: solid;
         border-color: black;
     }
@@ -100,8 +100,8 @@
     .tuile {
         margin: 16px;
         position: relative;
-        height: 252px;
-        width: 247px;
+        height: 329px;
+        width: 318px;
     }
 
     .tuile_bloctexte {
