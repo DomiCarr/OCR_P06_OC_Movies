@@ -1,0 +1,106 @@
+/* Desktop (789px → ) */
+/* @media (min-width: 1025px) { */
+
+/* Reinitialisation navigateur */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    width: 778px;
+    height: 939px;
+    margin-top: 50px;
+    margin-left: 100px;
+    padding: 15px;
+    border-style: solid;
+    border-color: black;
+    font-family: "Oswald", sans-serif;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.header_pic {
+    margin: 15px;
+}
+
+.top_text {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.top_real {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.top_info_tit {
+    font-size: 48px;
+    /* Semi-bold */
+    font-weight: 600;
+}
+
+.top_info_text {
+    font-size: 24px;
+    /* Semi-bold */
+    font-weight: 600;
+}
+
+.top_real_tit {
+    font-size: 24px;
+    /* Regular */
+    font-weight: 400;
+}
+
+.top_real_text {
+    font-size: 24px;
+    /* Light */
+    font-weight: 300;
+}
+
+.desc_text {
+    font-size: 24px;
+    /* Light */
+    font-weight: 300;
+}
+
+.desc_avec_tit {
+    font-size: 20px;
+    /* Regular */
+    font-weight: 400;
+}
+
+.desc_avec_text {
+    font-size: 20px;
+    /* Light */
+    font-weight: 300;
+}
+
+
+.desc_button {
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #FA0B0B;
+    border-color: #FA0B0B;
+    border-radius: 10px;
+    padding: 10px;
+    font-family: "Oswald", sans-serif;
+    color: white;
+    font-size: 20px;
+    /* Medium */
+    font-weight: 500;
+}
+
+/* }<
