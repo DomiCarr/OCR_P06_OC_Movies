@@ -1,5 +1,5 @@
-/* Desktop (1000px → ) */
-@media (min-width: 1000px) {
+/* Tabley & mobile : up to 999px */
+@media (max-width: 999px) {
     */
 
     /* Reinitialisation navigateur */
@@ -12,8 +12,8 @@
     }
 
     body {
-        width: 778px;
-        height: 939px;
+        width: 506px;
+        height: 1684px;
         margin-top: 50px;
         margin-left: 100px;
         padding: 15px;
@@ -28,7 +28,7 @@
 
     .top {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: space-between;
     }
 
