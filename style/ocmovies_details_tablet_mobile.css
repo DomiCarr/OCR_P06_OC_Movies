@@ -1,6 +1,5 @@
 /* Tabley & mobile : up to 999px */
 @media (max-width: 999px) {
-    */
 
     /* Reinitialisation navigateur */
     * {
@@ -23,13 +22,14 @@
         color: black;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: flex-start;
     }
 
     .top {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        align-items: center;
     }
 
     .header_pic {
@@ -43,6 +43,8 @@
     }
 
     .top_real {
+        padding-top: 20px;
+        padding-bottom: 20px;
         margin-top: auto;
         margin-bottom: auto;
     }
@@ -72,9 +74,14 @@
     }
 
     .desc_text {
+        padding: 20px;
         font-size: 24px;
         /* Light */
         font-weight: 300;
+    }
+
+    .desc_avec {
+        padding: 20px;
     }
 
     .desc_avec_tit {
@@ -90,17 +97,7 @@
     }
 
     .desc_button {
-        margin-left: auto;
-        margin-right: auto;
-        background-color: #FA0B0B;
-        border-color: #FA0B0B;
-        border-radius: 10px;
-        padding: 10px;
-        font-family: "Oswald", sans-serif;
-        color: white;
-        font-size: 20px;
-        /* Medium */
-        font-weight: 500;
+        display: none;
     }
 
 }
