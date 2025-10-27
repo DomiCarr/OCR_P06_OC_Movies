@@ -11,7 +11,6 @@
     }
 
     body {
-        width: 837px;
         margin-top: 60px;
         margin-left: 100px;
         margin-right: 100px;
@@ -54,6 +53,8 @@
         font-size: 48px;
         /* Semi-bold */
         font-weight: 600;
+        margin-top: 20px;
+        margin-bottom: 20px;
     }
 
     .bf_vignette {
@@ -62,6 +63,7 @@
         flex-direction: row;
         border-style: solid;
         border-color: black;
+        border-width: 5px;
     }
 
     .bf_vignette_desc {
@@ -83,8 +85,11 @@
     .bf_vignette_desc_bouton {
         margin-left: auto;
         background-color: #FA0B0B;
-        border-radius: 10px;
-        padding: 10px;
+        border-radius: 25px;
+        padding-left: 50px;
+        padding-right: 50px;
+        padding-top: 15px;
+        padding-bottom: 15px;
         font-family: "Oswald", sans-serif;
         color: white;
         font-size: 24px;
@@ -111,7 +116,7 @@
         left: 0;
         top: 40px;
         padding: 15px;
-        height: 100px;
+        height: 120px;
         width: 251px;
         display: flex;
         flex-direction: column;
@@ -137,6 +142,99 @@
         border-radius: 25px;
         padding: 5px;
         align-self: flex-end;
+    }
+
+
+    .modale {
+        width: 778px;
+        height: 939px;
+        margin-top: 50px;
+        margin-left: 100px;
+        padding: 15px;
+        border-style: solid;
+        border-color: black;
+        font-family: "Oswald", sans-serif;
+        color: black;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .top {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .header_pic {
+        margin: 15px;
+    }
+
+    .top_text {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .top_real {
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+
+    .top_info_tit {
+        font-size: 48px;
+        /* Semi-bold */
+        font-weight: 600;
+    }
+
+    .top_info_text {
+        font-size: 24px;
+        /* Semi-bold */
+        font-weight: 600;
+    }
+
+    .top_real_tit {
+        font-size: 24px;
+        /* Regular */
+        font-weight: 400;
+    }
+
+    .top_real_text {
+        font-size: 24px;
+        /* Light */
+        font-weight: 300;
+    }
+
+    .desc_text {
+        font-size: 24px;
+        /* Light */
+        font-weight: 300;
+    }
+
+    .desc_avec_tit {
+        font-size: 20px;
+        /* Regular */
+        font-weight: 400;
+    }
+
+    .desc_avec_text {
+        font-size: 20px;
+        /* Light */
+        font-weight: 300;
+    }
+
+    .desc_button {
+        margin-left: auto;
+        margin-right: auto;
+        background-color: #FA0B0B;
+        border-color: #FA0B0B;
+        border-radius: 10px;
+        padding: 10px;
+        font-family: "Oswald", sans-serif;
+        color: white;
+        font-size: 20px;
+        /* Medium */
+        font-weight: 500;
     }
 
 }

@@ -50,7 +50,7 @@
     .bf_vignette_desc_titre {
         font-family: "Oswald", sans-serif;
         color: black;
-        font-size: 48px;
+        font-size: 32px;
         /* Semi-bold */
         font-weight: 600;
     }
@@ -61,6 +61,7 @@
         flex-direction: column;
         border-style: solid;
         border-color: black;
+        border-width: 5px;
     }
 
     .bf_vignette_desc {
@@ -82,11 +83,14 @@
     .bf_vignette_desc_bouton {
         margin-left: auto;
         background-color: #FA0B0B;
-        border-radius: 10px;
-        padding: 10px;
+        border-radius: 25px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 10px;
+        padding-bottom: 10px;
         font-family: "Oswald", sans-serif;
         color: white;
-        font-size: 24px;
+        font-size: 14px;
         /* Medium */
         font-weight: 500;
     }
@@ -110,7 +114,7 @@
         left: 0;
         top: 40px;
         padding: 15px;
-        height: 100px;
+        height: 120px;
         width: 251px;
         display: flex;
         flex-direction: column;
@@ -136,6 +140,97 @@
         border-radius: 25px;
         padding: 5px;
         align-self: flex-end;
+    }
+
+
+    .modale {
+        width: 506px;
+        height: 1684px;
+        margin-top: 50px;
+        margin-left: 100px;
+        padding: 15px;
+        border-style: solid;
+        border-color: black;
+        font-family: "Oswald", sans-serif;
+        color: black;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .top {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .header_pic {
+        margin: 15px;
+    }
+
+    .top_text {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .top_real {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+
+    .top_info_tit {
+        font-size: 48px;
+        /* Semi-bold */
+        font-weight: 600;
+    }
+
+    .top_info_text {
+        font-size: 24px;
+        /* Semi-bold */
+        font-weight: 600;
+    }
+
+    .top_real_tit {
+        font-size: 24px;
+        /* Regular */
+        font-weight: 400;
+    }
+
+    .top_real_text {
+        font-size: 24px;
+        /* Light */
+        font-weight: 300;
+    }
+
+    .desc_text {
+        padding: 20px;
+        font-size: 24px;
+        /* Light */
+        font-weight: 300;
+    }
+
+    .desc_avec {
+        padding: 20px;
+    }
+
+    .desc_avec_tit {
+        font-size: 20px;
+        /* Regular */
+        font-weight: 400;
+    }
+
+    .desc_avec_text {
+        font-size: 20px;
+        /* Light */
+        font-weight: 300;
+    }
+
+    .desc_button {
+        display: none;
     }
 
 }
