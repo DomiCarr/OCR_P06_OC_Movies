@@ -1,0 +1,1192 @@
+===== index.html =====
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style/ocmovies_desktop.css">
+    <link rel="stylesheet" href="./style/ocmovies_tablet.css">
+    <link rel="stylesheet" href="./style/ocmovies_mobil.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <div class="header_pic">
+            <img src="./assets/pictures/just_dream_it.png">
+        </div>
+        <div class="header_text">
+            Vidéos à la demande
+        </div>
+    </header>
+
+    <main>
+        <div class="bloc_film">
+            <div class="bf_titre">Meilleur film</div>
+            <div class="bf_vignette">
+                <div class="bf_vignette_pic">
+                    <img src="./assets/pictures/lebowski 1.png">
+                </div>
+                <div class="bf_vignette_desc">
+                    <div class="bf_vignette_desc_titre">The Big Lebowski</div>
+                    <div class="bf_vignette_desc_texte">Jeff "The Dude" Lebowski, mistaken for a millionaire of
+                        the same name, seeks restitution for his ruined rug and
+                        enlists his bowling buddies to help get it.</div>
+                    <buton class="bf_vignette_desc_bouton">
+                        Détails
+                    </buton>
+                </div>
+            </div>
+        </div>
+
+        <div class="bloc_film">
+            <div class="bf_titre">Films les mieux notés</div>
+            <div class="bf_mosaik">
+                <div class="tuiles">
+                    <div class="tuile_1">
+                        <div class="tuile_pic">
+                            <img src="./assets/pictures/titanic 1.png">
+                        </div>
+                        <div class="tuile_bloctexte">
+                            <div class="tuile_bloctexte_texte">Titanic</div>
+                            <button class="tuile_bloctexte_button">Détails</button>
+                        </div>
+                    </div>
+
+                    <div class="tuile_1">
+                        <div class="tuile_pic">
+                            <img src="./assets/pictures/backtofuture 1.png">
+                        </div>
+                        <div class="tuile_bloctexte">
+                            <div class="tuile_bloctexte_texte">Retour vers le futur</div>
+                            <button class="tuile_bloctexte_button">Détails</button>
+                        </div>
+                    </div>
+
+                    <div class="tuile_2">
+                        <div class="tuile_pic">
+                            <img src="./assets/pictures/scarface 1.png">
+                        </div>
+                        <div class="tuile_bloctexte">
+                            <div class="tuile_bloctexte_texte">Scarface</div>
+                            <button class="tuile_bloctexte_button">Détails</button>
+                        </div>
+                    </div>
+
+                    <div class="tuile_2">
+                        <div class="tuile_pic">
+                            <img src="./assets/pictures/pulpfiction 1.png">
+                        </div>
+                        <div class="tuile_bloctexte">
+                            <div class="tuile_bloctexte_texte">Pulp Fiction</div>
+                            <button class="tuile_bloctexte_button">Détails</button>
+                        </div>
+                    </div>
+
+                    <div class="tuile_3">
+                        <div class="tuile_pic">
+                            <img src="./assets/pictures/godfather 1.png">
+                        </div>
+                        <div class="tuile_bloctexte">
+                            <div class="tuile_bloctexte_texte">Le Parrain</div>
+                            <button class="tuile_bloctexte_button">Détails</button>
+                        </div>
+                    </div>
+
+                    <div class="tuile_3">
+                        <div class="tuile_pic">
+                            <img src="./assets/pictures/alien 1.png">
+                        </div>
+                        <div class="tuile_bloctexte">
+                            <div class="tuile_bloctexte_texte">Alien</div>
+                            <button class="tuile_bloctexte_button">Détails</button>
+                        </div>
+                    </div>
+                </div>
+                <buton class="bf_voir_plus_bouton">
+                    Voir plus
+                </buton>
+
+            </div>
+        </div>
+
+        <div class="bloc_film">
+            <div class="bf_titre">Mystery</div>
+            <div class="bf_mosaik">
+                <div class="tuiles">
+                    <div class="tuile_1">
+                        <div class="tuile_pic">
+                            <img src="./assets/pictures/titanic 1.png">
+                        </div>
+                        <div class="tuile_bloctexte">
+                            <div class="tuile_bloctexte_texte">Titanic</div>
+                            <button class="tuile_bloctexte_button">Détails</button>
+                        </div>
+                    </div>
+
+                    <div class="tuile_1">
+                        <div class="tuile_pic">
+                            <img src="./assets/pictures/backtofuture 1.png">
+                        </div>
+                        <div class="tuile_bloctexte">
+                            <div class="tuile_bloctexte_texte">Retour vers le futur</div>
+                            <button class="tuile_bloctexte_button">Détails</button>
+                        </div>
+                    </div>
+
+                    <div class="tuile_2">
+                        <div class="tuile_pic">
+                            <img src="./assets/pictures/scarface 1.png">
+                        </div>
+                        <div class="tuile_bloctexte">
+                            <div class="tuile_bloctexte_texte">Scarface</div>
+                            <button class="tuile_bloctexte_button">Détails</button>
+                        </div>
+                    </div>
+
+                    <div class="tuile_2">
+                        <div class="tuile_pic">
+                            <img src="./assets/pictures/pulpfiction 1.png">
+                        </div>
+                        <div class="tuile_bloctexte">
+                            <div class="tuile_bloctexte_texte">Pulp Fiction</div>
+                            <button class="tuile_bloctexte_button">Détails</button>
+                        </div>
+                    </div>
+
+                    <div class="tuile_3">
+                        <div class="tuile_pic">
+                            <img src="./assets/pictures/godfather 1.png">
+                        </div>
+                        <div class="tuile_bloctexte">
+                            <div class="tuile_bloctexte_texte">Le Parrain</div>
+                            <button class="tuile_bloctexte_button">Détails</button>
+                        </div>
+                    </div>
+
+                    <div class="tuile_3">
+                        <div class="tuile_pic">
+                            <img src="./assets/pictures/alien 1.png">
+                        </div>
+                        <div class="tuile_bloctexte">
+                            <div class="tuile_bloctexte_texte">Alien</div>
+                            <button class="tuile_bloctexte_button">Détails</button>
+                        </div>
+                    </div>
+                </div>
+                <buton class="bf_voir_plus_bouton">
+                    Voir plus
+                </buton>
+
+            </div>
+        </div>
+
+        <div class="bloc_film">
+            <div class="bf_titre">Category 2</div>
+            <div class="bf_mosaik">
+                <div class="tuiles">
+
+                    <div class="tuile_1">
+                        <div class="tuile_pic">
+                            <img src="./assets/pictures/titanic 1.png">
+                        </div>
+                        <div class="tuile_bloctexte">
+                            <div class="tuile_bloctexte_texte">Titanic</div>
+                            <button class="tuile_bloctexte_button">Détails</button>
+                        </div>
+                    </div>
+
+                    <div class="tuile_1">
+                        <div class="tuile_pic">
+                            <img src="./assets/pictures/backtofuture 1.png">
+                        </div>
+                        <div class="tuile_bloctexte">
+                            <div class="tuile_bloctexte_texte">Retour vers le futur</div>
+                            <button class="tuile_bloctexte_button">Détails</button>
+                        </div>
+                    </div>
+
+                    <div class="tuile_2">
+                        <div class="tuile_pic">
+                            <img src="./assets/pictures/scarface 1.png">
+                        </div>
+                        <div class="tuile_bloctexte">
+                            <div class="tuile_bloctexte_texte">Scarface</div>
+                            <button class="tuile_bloctexte_button">Détails</button>
+                        </div>
+                    </div>
+
+                    <div class="tuile_2">
+                        <div class="tuile_pic">
+                            <img src="./assets/pictures/pulpfiction 1.png">
+                        </div>
+                        <div class="tuile_bloctexte">
+                            <div class="tuile_bloctexte_texte">Pulp Fiction</div>
+                            <button class="tuile_bloctexte_button">Détails</button>
+                        </div>
+                    </div>
+
+                    <div class="tuile_3">
+                        <div class="tuile_pic">
+                            <img src="./assets/pictures/godfather 1.png">
+                        </div>
+                        <div class="tuile_bloctexte">
+                            <div class="tuile_bloctexte_texte">Le Parrain</div>
+                            <button class="tuile_bloctexte_button">Détails</button>
+                        </div>
+                    </div>
+
+                    <div class="tuile_3">
+                        <div class="tuile_pic">
+                            <img src="./assets/pictures/alien 1.png">
+                        </div>
+                        <div class="tuile_bloctexte">
+                            <div class="tuile_bloctexte_texte">Alien</div>
+                            <button class="tuile_bloctexte_button">Détails</button>
+                        </div>
+                    </div>
+                </div>
+                <buton class="bf_voir_plus_bouton">
+                    Voir plus
+                </buton>
+
+
+            </div>
+        </div>
+
+        <div class="bloc_film">
+            <div class="bf_titre">Autres</div>
+            <div class="bf_mosaik">
+                <div class="tuiles">
+
+                    <div class="tuile_1">
+                        <div class="tuile_pic">
+                            <img src="./assets/pictures/titanic 1.png">
+                        </div>
+                        <div class="tuile_bloctexte">
+                            <div class="tuile_bloctexte_texte">Titanic</div>
+                            <button class="tuile_bloctexte_button">Détails</button>
+                        </div>
+                    </div>
+
+                    <div class="tuile_1">
+                        <div class="tuile_pic">
+                            <img src="./assets/pictures/backtofuture 1.png">
+                        </div>
+                        <div class="tuile_bloctexte">
+                            <div class="tuile_bloctexte_texte">Retour vers le futur</div>
+                            <button class="tuile_bloctexte_button">Détails</button>
+                        </div>
+                    </div>
+
+                    <div class="tuile_2">
+                        <div class="tuile_pic">
+                            <img src="./assets/pictures/scarface 1.png">
+                        </div>
+                        <div class="tuile_bloctexte">
+                            <div class="tuile_bloctexte_texte">Scarface</div>
+                            <button class="tuile_bloctexte_button">Détails</button>
+                        </div>
+                    </div>
+
+                    <div class="tuile_2">
+                        <div class="tuile_pic">
+                            <img src="./assets/pictures/pulpfiction 1.png">
+                        </div>
+                        <div class="tuile_bloctexte">
+                            <div class="tuile_bloctexte_texte">Pulp Fiction</div>
+                            <button class="tuile_bloctexte_button">Détails</button>
+                        </div>
+                    </div>
+
+                    <div class="tuile_3">
+                        <div class="tuile_pic">
+                            <img src="./assets/pictures/godfather 1.png">
+                        </div>
+                        <div class="tuile_bloctexte">
+                            <div class="tuile_bloctexte_texte">Le Parrain</div>
+                            <button class="tuile_bloctexte_button">Détails</button>
+                        </div>
+                    </div>
+
+                    <div class="tuile_3">
+                        <div class="tuile_pic">
+                            <img src="./assets/pictures/alien 1.png">
+                        </div>
+                        <div class="tuile_bloctexte">
+                            <div class="tuile_bloctexte_texte">Alien</div>
+                            <button class="tuile_bloctexte_button">Détails</button>
+                        </div>
+                    </div>
+                </div>
+
+                <buton class="bf_voir_plus_bouton">
+                    Voir plus
+                </buton>
+            </div>
+        </div>
+
+    </main>
+
+    <div class="modale hidden_modale">
+        <div class="content">
+            <div class="top">
+                <div class="top_text">
+                    <div class="top_info">
+                        <div class="top_info_tit">
+                            The Big Lebowski
+                        </div>
+                        <div class="top_info_text">
+                            <p>1998 - Comedy, Crime, Sport</p>
+                            <p>PG-13 - 117 minutes (USA / UK)</p>
+                            <p>IMDB score: 8.1/10</p>
+                            <p>Recettes au box-office: $48.2m</p>
+                        </div>
+                    </div>
+                    <div class="top_real">
+                        <div class="top_real_tit">
+                            Réalisé par:
+                        </div>
+                        <div class="top_real_text">
+                            Joel Cohen, Ethan Cohen
+                        </div>
+                    </div>
+                </div>
+                <div class="header_pic">
+                    <img src="./assets/pictures/lebowski 1.png">
+                </div>
+            </div>
+            <div class="desc_text">
+                When "the dude" Lebowski is mistaken for a millionaire Lebowski, two thugs urinate on his rug to coerce
+                him
+                into paying a debt he knows nothing about. While attempting to gain recompense for the ruined rug from
+                his
+                wealthy counterpart, he accepts a one-time job with high pay-off. He enlists the help of his bowling
+                buddy,
+                Walter, a gun-toting Jewish-convert with anger issues. Deception leads to more trouble, and it soon
+                seems
+                that everyone from porn empire tycoons to nihilists want something from The Dude.
+            </div>
+            <div class="desc_avec">
+                <div class="desc_avec_tit">Avec:</div>
+                <div class="desc_avec_text">
+                    David Huddleston, Flea, Jack Kehler, Jeff Bridges, Jimmie Dale Gilmore, John Goodman, John Turturro,
+                    Julianne Moore, Mark Pellegrino, Peter Stormare, Philip Moon, Philip Seymour Hoffman, Steve Buscemi,
+                    Tara
+                    Reid, Torsten Voges
+                </div>
+            </div>
+
+            <button class="desc_button" onclick="window.close();">
+                Fermer
+            </button>
+        </div>
+    </div>
+</body>
+
+</html>
+
+
+===== style/ocmovies_desktop.css =====
+/* Desktop (789px → ) */
+@media (min-width: 1025px) {
+
+    /* Reinitialisation navigateur */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        list-style: none;
+        text-decoration: none;
+    }
+
+    body {
+        margin-top: 60px;
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+
+    header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        background-color: #61787F;
+    }
+
+    .header_pic {
+        margin: 15px;
+    }
+
+    .header_text {
+        margin-left: 40px;
+        font-family: "Oswald", sans-serif;
+        color: white;
+        font-size: 40px;
+        /* Light */
+        font-weight: 300;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .bloc_film {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .bf_titre,
+    .bf_vignette_desc_titre {
+        font-family: "Oswald", sans-serif;
+        color: black;
+        font-size: 48px;
+        /* Semi-bold */
+        font-weight: 600;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .bf_vignette {
+        padding: 10px;
+        display: flex;
+        flex-direction: row;
+        border-style: solid;
+        border-color: black;
+        border-width: 5px;
+    }
+
+    .bf_vignette_desc {
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .bf_vignette_desc_texte {
+        align-self: center;
+        font-family: "Oswald", sans-serif;
+        color: black;
+        font-size: 28px;
+        /* ExtraLight */
+        font-weight: 200;
+    }
+
+    .bf_vignette_desc_bouton {
+        margin-left: auto;
+        background-color: #FA0B0B;
+        border-radius: 25px;
+        padding-left: 50px;
+        padding-right: 50px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        font-family: "Oswald", sans-serif;
+        color: white;
+        font-size: 24px;
+        /* Medium */
+        font-weight: 500;
+    }
+
+    .bf_mosaik {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .tuiles {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+
+    .tuile_1,
+    .tuile_2,
+    .tuile_3 {
+        position: relative;
+        height: 252px;
+        width: 247px;
+    }
+
+    .bf_voir_plus_bouton {
+        display: none;
+    }
+
+    .tuile_bloctexte {
+        background-color: rgba(0, 0, 0, 0.5);
+        position: absolute;
+        left: 0;
+        top: 40px;
+        padding: 15px;
+        height: 120px;
+        width: 251px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .tuile_bloctexte_texte {
+        font-family: "Oswald", sans-serif;
+        color: white;
+        /* Semi-bold */
+        font-size: 24px;
+        font-weight: 600;
+        align-self: flex-start;
+    }
+
+    .tuile_bloctexte_button {
+        font-family: "Oswald", sans-serif;
+        color: white;
+        font-size: 14px;
+        /* Medium */
+        font-weight: 500;
+        background-color: black;
+        border-radius: 25px;
+        padding: 5px;
+        align-self: flex-end;
+    }
+
+    .modale {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.9);
+        padding: 50px;
+    }
+
+
+    .hidden_modale {
+        display: none;
+    }
+
+    .content {
+        background-color: white;
+        padding: 20px;
+        border-style: solid;
+        border-color: black;
+        font-family: "Oswald", sans-serif;
+        color: black;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .top {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .header_pic {
+        margin: 15px;
+    }
+
+    .top_text {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .top_real {
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+
+    .top_info_tit {
+        font-size: 48px;
+        /* Semi-bold */
+        font-weight: 600;
+    }
+
+    .top_info_text {
+        font-size: 24px;
+        /* Semi-bold */
+        font-weight: 600;
+    }
+
+    .top_real_tit {
+        font-size: 24px;
+        /* Regular */
+        font-weight: 400;
+    }
+
+    .top_real_text {
+        font-size: 24px;
+        /* Light */
+        font-weight: 300;
+    }
+
+    .desc_text {
+        font-size: 24px;
+        /* Light */
+        font-weight: 300;
+    }
+
+    .desc_avec_tit {
+        font-size: 20px;
+        /* Regular */
+        font-weight: 400;
+    }
+
+    .desc_avec_text {
+        font-size: 20px;
+        /* Light */
+        font-weight: 300;
+    }
+
+    .desc_button {
+        margin-left: auto;
+        margin-right: auto;
+        background-color: #FA0B0B;
+        border-color: #FA0B0B;
+        border-radius: 10px;
+        padding: 10px;
+        font-family: "Oswald", sans-serif;
+        color: white;
+        font-size: 20px;
+        /* Medium */
+        font-weight: 500;
+    }
+
+}
+
+
+===== style/ocmovies_mobil.css =====
+/* Desktop (789px → ) */
+@media (max-width: 788px) {
+
+    /* Reinitialisation navigateur */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        list-style: none;
+        text-decoration: none;
+    }
+
+    body {
+        margin-top: 60px;
+        margin-left: 110px;
+        margin-right: 110px;
+    }
+
+    header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        background-color: #61787F;
+    }
+
+    .header_pic {
+        margin: 15px;
+    }
+
+    .header_text {
+        margin-left: 40px;
+        font-family: "Oswald", sans-serif;
+        color: white;
+        font-size: 40px;
+        /* Light */
+        font-weight: 300;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .bloc_film {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .bf_titre,
+    .bf_vignette_desc_titre {
+        font-family: "Oswald", sans-serif;
+        color: black;
+        font-size: 32px;
+        /* Semi-bold */
+        font-weight: 600;
+    }
+
+    .bf_vignette {
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        border-style: solid;
+        border-color: black;
+        border-width: 5px;
+    }
+
+    .bf_vignette_desc {
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .bf_vignette_desc_texte {
+        align-self: center;
+        font-family: "Oswald", sans-serif;
+        color: black;
+        font-size: 28px;
+        /* ExtraLight */
+        font-weight: 200;
+    }
+
+    .bf_vignette_desc_bouton {
+        margin-left: auto;
+        background-color: #FA0B0B;
+        border-radius: 25px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        font-family: "Oswald", sans-serif;
+        color: white;
+        font-size: 14px;
+        /* Medium */
+        font-weight: 500;
+    }
+
+    .bf_mosaik {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%
+    }
+
+    .tuiles {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .tuile_1 {
+        position: relative;
+        height: 329px;
+        width: 318px;
+    }
+
+    .tuile_2,
+    .tuile_3 {
+        display: none;
+    }
+
+    .tuile_bloctexte {
+        background-color: rgba(0, 0, 0, 0.5);
+        position: absolute;
+        left: 0;
+        top: 40px;
+        padding: 15px;
+        height: 120px;
+        width: 251px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .tuile_bloctexte_texte {
+        font-family: "Oswald", sans-serif;
+        color: white;
+        /* Semi-bold */
+        font-size: 24px;
+        font-weight: 600;
+        align-self: flex-start;
+    }
+
+    .tuile_bloctexte_button {
+        font-family: "Oswald", sans-serif;
+        color: white;
+        font-size: 14px;
+        /* Medium */
+        font-weight: 500;
+        background-color: black;
+        border-radius: 25px;
+        padding: 5px;
+        align-self: flex-end;
+    }
+
+    .bf_voir_plus_bouton {
+        background-color: #FA0B0B;
+        border-radius: 25px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        font-family: "Oswald", sans-serif;
+        color: white;
+        font-size: 14px;
+        /* Medium */
+        font-weight: 500;
+    }
+
+    .modale {
+        width: 506px;
+        height: 1684px;
+        margin-top: 50px;
+        margin-left: 100px;
+        padding: 15px;
+        border-style: solid;
+        border-color: black;
+        font-family: "Oswald", sans-serif;
+        color: black;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .top {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .header_pic {
+        margin: 15px;
+    }
+
+    .top_text {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .top_real {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+
+    .top_info_tit {
+        font-size: 48px;
+        /* Semi-bold */
+        font-weight: 600;
+    }
+
+    .top_info_text {
+        font-size: 24px;
+        /* Semi-bold */
+        font-weight: 600;
+    }
+
+    .top_real_tit {
+        font-size: 24px;
+        /* Regular */
+        font-weight: 400;
+    }
+
+    .top_real_text {
+        font-size: 24px;
+        /* Light */
+        font-weight: 300;
+    }
+
+    .desc_text {
+        padding: 20px;
+        font-size: 24px;
+        /* Light */
+        font-weight: 300;
+    }
+
+    .desc_avec {
+        padding: 20px;
+    }
+
+    .desc_avec_tit {
+        font-size: 20px;
+        /* Regular */
+        font-weight: 400;
+    }
+
+    .desc_avec_text {
+        font-size: 20px;
+        /* Light */
+        font-weight: 300;
+    }
+
+    .desc_button {
+        display: none;
+    }
+
+}
+
+
+===== style/ocmovies_tablet.css =====
+/* Desktop (789px → ) */
+@media (min-width: 789px) and (max-width:1024px) {
+
+    /* Reinitialisation navigateur */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        list-style: none;
+        text-decoration: none;
+    }
+
+    body {
+        width: 620;
+        margin-top: 60px;
+        margin-left: 110px;
+        margin-right: 110px;
+    }
+
+    header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        background-color: #61787F;
+    }
+
+    .header_pic {
+        margin: 15px;
+    }
+
+    .header_text {
+        margin-left: 40px;
+        font-family: "Oswald", sans-serif;
+        color: white;
+        font-size: 40px;
+        /* Light */
+        font-weight: 300;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .bloc_film {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .bf_titre,
+    .bf_vignette_desc_titre {
+        font-family: "Oswald", sans-serif;
+        color: black;
+        font-size: 40px;
+        /* Semi-bold */
+        font-weight: 600;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+
+    .bf_vignette {
+        padding: 10px;
+        display: flex;
+        flex-direction: row;
+        border-style: solid;
+        border-color: black;
+        border-width: 5px;
+    }
+
+    .bf_vignette_desc {
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .bf_vignette_desc_texte {
+        align-self: center;
+        font-family: "Oswald", sans-serif;
+        color: black;
+        font-size: 28px;
+        /* ExtraLight */
+        font-weight: 200;
+    }
+
+    .bf_vignette_desc_bouton {
+        margin-left: auto;
+        background-color: #FA0B0B;
+        border-radius: 22px;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        font-family: "Oswald", sans-serif;
+        color: white;
+        font-size: 20px;
+        /* Medium */
+        font-weight: 500;
+    }
+
+    .bf_mosaik {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%
+    }
+
+    .tuiles {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .tuile_1,
+    .tuile_2 {
+        position: relative;
+        height: 295px;
+        width: 286px;
+    }
+
+    .tuile_3 {
+        display: none;
+    }
+
+    .tuile_bloctexte {
+        background-color: rgba(0, 0, 0, 0.5);
+        position: absolute;
+        left: 0;
+        top: 40px;
+        padding: 15px;
+        height: 120px;
+        width: 251px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .tuile_bloctexte_texte {
+        font-family: "Oswald", sans-serif;
+        color: white;
+        /* Semi-bold */
+        font-size: 24px;
+        font-weight: 600;
+        align-self: flex-start;
+    }
+
+    .tuile_bloctexte_button {
+        font-family: "Oswald", sans-serif;
+        color: white;
+        font-size: 14px;
+        /* Medium */
+        font-weight: 500;
+        background-color: black;
+        border-radius: 25px;
+        padding: 5px;
+        align-self: flex-end;
+    }
+
+    .bf_voir_plus_bouton {
+        background-color: #FA0B0B;
+        border-radius: 22px;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        font-family: "Oswald", sans-serif;
+        color: white;
+        font-size: 20px;
+        /* Medium */
+        font-weight: 500;
+    }
+
+    .modale {
+        width: 506px;
+        height: 1684px;
+        margin-top: 50px;
+        margin-left: 100px;
+        padding: 15px;
+        border-style: solid;
+        border-color: black;
+        font-family: "Oswald", sans-serif;
+        color: black;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .top {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .header_pic {
+        margin: 15px;
+    }
+
+    .top_text {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .top_real {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+
+    .top_info_tit {
+        font-size: 48px;
+        /* Semi-bold */
+        font-weight: 600;
+    }
+
+    .top_info_text {
+        font-size: 24px;
+        /* Semi-bold */
+        font-weight: 600;
+    }
+
+    .top_real_tit {
+        font-size: 24px;
+        /* Regular */
+        font-weight: 400;
+    }
+
+    .top_real_text {
+        font-size: 24px;
+        /* Light */
+        font-weight: 300;
+    }
+
+    .desc_text {
+        padding: 20px;
+        font-size: 24px;
+        /* Light */
+        font-weight: 300;
+    }
+
+    .desc_avec {
+        padding: 20px;
+    }
+
+    .desc_avec_tit {
+        font-size: 20px;
+        /* Regular */
+        font-weight: 400;
+    }
+
+    .desc_avec_text {
+        font-size: 20px;
+        /* Light */
+        font-weight: 300;
+    }
+
+    .desc_button {
+        display: none;
+    }
+
+
+}
+
+
