@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="./style/ocmovies_desktop.css">
     <link rel="stylesheet" href="./style/ocmovies_tablet.css">
     <link rel="stylesheet" href="./style/ocmovies_mobil.css">
+    <script src="scripts/config.js" defer></script>
+    <script src="scripts/functions.js" defer></script>
+    <script src="scripts/main.js" defer></script>
+
     <title>Document</title>
 </head>
 
@@ -33,7 +37,7 @@
                     <div class="bf_vignette_desc_texte">Jeff "The Dude" Lebowski, mistaken for a millionaire of
                         the same name, seeks restitution for his ruined rug and
                         enlists his bowling buddies to help get it.</div>
-                    <buton class="bf_vignette_desc_bouton">
+                    <buton id="btnDetails" class="bf_vignette_desc_bouton">
                         Détails
                     </buton>
                 </div>
@@ -342,7 +346,7 @@
 
     </main>
 
-    <div class="modale hidden_modale">
+    <div id="modale" class="modale hidden_modale">
         <div class="content">
             <div class="top">
                 <div class="top_text">
@@ -369,7 +373,9 @@
                 <div class="modal_desktop_pic">
                     <img src="./assets/pictures/lebowski 1.png">
                 </div>
-                <div class="modal_tab_mob_close_icon">X</div>
+                <button id="iconCloseModal" class="icon_close_modal">
+                    X
+                </button>
             </div>
             <div class="desc_text">
                 When "the dude" Lebowski is mistaken for a millionaire Lebowski, two thugs urinate on his rug to coerce
@@ -395,7 +401,7 @@
                 </div>
             </div>
 
-            <button class="desc_button">
+            <button id="btnCloseModal" class="btn_close_modal">
                 Fermer
             </button>
         </div>

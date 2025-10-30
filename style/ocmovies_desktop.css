@@ -207,6 +207,8 @@
         align-self: flex-end;
     }
 
+    /* -------------- MODALE ------------- */
+
     .modale {
         position: fixed;
         top: 0;
@@ -218,11 +220,11 @@
         z-index: 9999;
     }
 
-    /*
+
     .hidden_modale {
         display: none;
     }
-*/
+
     .content {
         background-color: bisque;
         padding: 20px;
@@ -245,7 +247,7 @@
         padding: 20px;
     }
 
-    .modal_tab_mob_close_icon {
+    .icon_close_modal {
         display: none;
     }
 
@@ -307,7 +309,7 @@
         padding-bottom: 30px;
     }
 
-    .desc_button {
+    .btn_close_modal {
         margin-left: auto;
         margin-right: auto;
         background-color: #FA0B0B;

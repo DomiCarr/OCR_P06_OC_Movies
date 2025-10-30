@@ -238,11 +238,11 @@
         z-index: 9999;
     }
 
-    /*
+
     .hidden_modale {
         display: none;
     }
-*/
+
     .content {
         background-color: seagreen;
         padding: 20px;
@@ -259,9 +259,10 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        align-items: flex-start;
     }
 
-    .modal_tab_mob_close_icon {
+    .icon_close_modal {
         padding: 20px;
         color: #FA0B0B;
         font-family: "Oswald", sans-serif;
@@ -345,7 +346,7 @@
         font-weight: 300;
     }
 
-    .desc_button {
+    .btn_close_modal {
         display: none;
     }
 
