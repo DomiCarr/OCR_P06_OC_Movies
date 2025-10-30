@@ -1,9 +1,9 @@
 /* Desktop (789px → ) */
-@media (min-width: 1025px) {
+@media (min-width: 1001px) {
 
     /* --------------------------- */
     /* Reinitialisation navigateur */
-    /* --------------------------- */
+
     * {
         margin: 0;
         padding: 0;
@@ -94,6 +94,11 @@
     /* Effet survol */
     .bf_menu li:hover {
         background-color: #f2f2f2;
+    }
+
+    .selected_category {
+        background-color: #FA0B0B;
+        color: white;
     }
 
     .bf_titre,

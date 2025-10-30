@@ -79,6 +79,7 @@
         /* Semi-bold */
         font-weight: 600;
         background-color: white;
+        width: 300px;
     }
 
     .bf_menu li {
@@ -161,6 +162,8 @@
         font-weight: 500;
     }
 
+    /* mosaik */
+
     .bf_mosaik {
         display: flex;
         flex-direction: column;
@@ -171,9 +174,9 @@
 
     .tuiles {
         display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
+        flex-direction: column;
         justify-content: center;
+        align-items: center;
         gap: 20px;
         width: 100%;
     }
@@ -185,6 +188,11 @@
     .tuile_2,
     .tuile_3 {
         display: none;
+    }
+
+    .show_all_tiles .tuile_2,
+    .show_all_tiles .tuile_3 {
+        display: flex;
     }
 
     .tuile_bloctexte {
@@ -235,6 +243,7 @@
         font-weight: 500;
     }
 
+    /* -------------- MODALE ------------- */
 
     .modale {
         position: fixed;

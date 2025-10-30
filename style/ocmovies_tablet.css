@@ -1,5 +1,5 @@
 /* Desktop (789px → ) */
-@media (min-width: 850px) and (max-width:1024px) {
+@media (min-width: 850px) and (max-width:1000px) {
 
     /* --------------------------- */
     /* Reinitialisation navigateur */
@@ -178,6 +178,11 @@
         display: none;
     }
 
+    .show_all_tiles .tuile_3 {
+        display: flex;
+    }
+
+
     .tuile_bloctexte {
         background-color: rgba(0, 0, 0, 0.5);
         position: absolute;
@@ -226,6 +231,7 @@
         font-weight: 500;
     }
 
+    /* -------------- MODALE ------------- */
 
     .modale {
         position: fixed;
