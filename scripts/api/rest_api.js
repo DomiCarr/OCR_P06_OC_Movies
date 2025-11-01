@@ -98,31 +98,32 @@ async function getAllGenres() {
 // --------------------------------------------------
 //
 async function extractMoviesByGenre(genre) {
+    const movies = [];
+    let page = 1;
+
     console.log("Fetching movies for genre:", genre);
 
-    let movies = [];
-    let pageUrl = `${titlesUrl}?genre=${encodeURIComponent(genre)}&page=1`;
+    while (movies.length < 6) {
+        const response = await fetch(
+            `${titlesUrl}?genre=${encodeURIComponent(genre)}&page=${page}`
+        );
 
-    while (movies.length < 6 && pageUrl) {
-        const response = await fetch(pageUrl);
         console.log("HTTP response status:", response.status);
-
         const data = await response.json();
-        console.log("Movies returned by API this page:", data.results.length);
+        console.log("Movies returned this page:", data.results.length);
 
-        // Add movies from this page
-        for (let m of data.results) {
+        for (let i = 0; i < data.results.length && movies.length < 6; i++) {
+            const movie = data.results[i];
             movies.push({
-                id: m.id,
-                title: m.title,
-                image_url: m.image_url
+                id: movie.id,
+                title: movie.title,
+                image_url: movie.image_url
             });
-            console.log(`Processed movie: ${m.title}`);
-            if (movies.length >= 6) break;
+            console.log("Processed movie:", movie.title);
         }
 
-        // Prepare next page if needed
-        pageUrl = movies.length < 6 ? data.next : null;
+        if (data.results.length === 0) break;
+        page++;
     }
 
     console.log("Movies array ready:", movies);

@@ -8,86 +8,51 @@
 //
 // --------------------------------------------------
 //
-function generateTiles(categoryName, movies, containerSelector) {
+
+function generateTiles(genreName, movies, containerSelector) {
     const container = document.querySelector(containerSelector);
     if (!container) {
         console.error("Container not found:", containerSelector);
         return;
     }
 
-    // Create the bloc_film wrapper
-    const blocFilm = document.createElement("div");
-    blocFilm.className = "bloc_film";
+    // build HTML string
+    let html = `
+    <div class="bloc_film">
+        <div class="bf_titre">${genreName}</div>
+        <div class="bf_mosaik">
+            <div class="tuiles">
+    `;
 
-    // Category title
-    const bfTitre = document.createElement("div");
-    bfTitre.className = "bf_titre";
-    bfTitre.textContent = categoryName;
-    blocFilm.appendChild(bfTitre);
+    // assign tuile classes for responsiveness
+    const tuileClasses = ["tuile_1", "tuile_1", "tuile_2",
+        "tuile_2", "tuile_3", "tuile_3"];
 
-    // Mosaic container
-    const bfMosaik = document.createElement("div");
-    bfMosaik.className = "bf_mosaik";
-
-    const tuilesDiv = document.createElement("div");
-    tuilesDiv.className = "tuiles";
-
-    // Generate each tile
     for (let i = 0; i < movies.length; i++) {
         const movie = movies[i];
+        const tuileClass = tuileClasses[i % tuileClasses.length];
 
-        // Assign tuile class based on index to match existing CSS (tuile_1, tuile_2, tuile_3)
-        const tuileClass = "tuile_" + ((i % 3) + 1);
-
-        const tuileDiv = document.createElement("div");
-        tuileDiv.className = tuileClass;
-
-        // Image container
-        const picDiv = document.createElement("div");
-        picDiv.className = "tuile_pic";
-        const img = document.createElement("img");
-        img.src = movie.image_url;
-        img.alt = movie.title;
-        picDiv.appendChild(img);
-
-        // Text + button container
-        const textDiv = document.createElement("div");
-        textDiv.className = "tuile_bloctexte";
-
-        const titleDiv = document.createElement("div");
-        titleDiv.className = "tuile_bloctexte_texte";
-        titleDiv.textContent = movie.title;
-
-        const button = document.createElement("button");
-        button.className = "tuile_bloctexte_button";
-        button.textContent = "Détails";
-        button.addEventListener("click", () => {
-            console.log("Clicked movie id:", movie.id);
-            // Ici tu pourras appeler la modale ou autre
-        });
-
-        textDiv.appendChild(titleDiv);
-        textDiv.appendChild(button);
-
-        // Assemble tile
-        tuileDiv.appendChild(picDiv);
-        tuileDiv.appendChild(textDiv);
-
-        // Add to tuiles container
-        tuilesDiv.appendChild(tuileDiv);
+        html += `
+            <div class="${tuileClass}">
+                <div class="tuile_pic">
+                    <img src="${movie.image_url}" alt="${movie.title}">
+                </div>
+                <div class="tuile_bloctexte">
+                    <div class="tuile_bloctexte_texte">${movie.title}</div>
+                    <button class="tuile_bloctexte_button"
+                            data-id="${movie.id}">
+                        Détails
+                    </button>
+                </div>
+            </div>`;
     }
 
-    bfMosaik.appendChild(tuilesDiv);
+    html += `
+            </div>
+            <button class="bf_voir_plus_bouton">Voir plus</button>
+        </div>
+    </div>`;
 
-    // Voir plus button
-    const voirPlusBtn = document.createElement("button");
-    voirPlusBtn.className = "bf_voir_plus_bouton";
-    voirPlusBtn.textContent = "Voir plus";
-    bfMosaik.appendChild(voirPlusBtn);
-
-    // Append mosaic to blocFilm
-    blocFilm.appendChild(bfMosaik);
-
-    // Inject into page
-    container.appendChild(blocFilm);
+    // inject block in DOM
+    container.insertAdjacentHTML("beforeend", html);
 }

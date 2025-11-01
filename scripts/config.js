@@ -14,4 +14,6 @@ const titlesUrl = "http://localhost:8000/api/v1/titles/";
 // Global variable to store the currently selected genre
 let selectedGenre = "";
 
-
+// initialization of the 2 genres presented in the main page
+category1 = "Mystery";
+category2 = "Comedie";

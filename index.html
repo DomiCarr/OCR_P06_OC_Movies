@@ -8,16 +8,15 @@
     <link rel="stylesheet" href="./style/ocmovies_desktop.css">
     <link rel="stylesheet" href="./style/ocmovies_tablet.css">
     <link rel="stylesheet" href="./style/ocmovies_mobil.css">
+
     <script src="scripts/config.js" defer></script>
     <script src="scripts/api/rest_api.js" defer></script>
-
     <script src="scripts/ui/modal.js" defer></script>
     <script src="scripts/ui/menu.js" defer></script>
-
     <script src="scripts/events.js" defer></script>
     <script src="scripts/main.js" defer></script>
 
-    <title>Document</title>
+    <title>OCMovies</title>
 </head>
 
 <body>
@@ -30,10 +29,76 @@
         </div>
     </header>
 
-    <main id="mainContent">
+    <main>
+        <div class="bloc_film" data-category="best">
+            <div class="bf_titre">Meilleur film</div>
+            <div class="bf_vignette"></div>
+        </div>
 
+        <div class="bloc_film" data-category="top_rated">
+            <div class="bf_titre">Films les mieux notés</div>
+            <div class="bf_mosaik">
+                <div class="tuiles"></div>
+                <button class="bf_voir_plus_bouton">Voir plus</button>
+            </div>
+        </div>
+
+        <div class="bloc_film" data-category="category1">
+            <div class=" bf_titre">Mystery</div>
+            <div class="bf_mosaik">
+                <div class="tuiles"></div>
+                <button class="bf_voir_plus_bouton">Voir plus</button>
+            </div>
+        </div>
+
+        <div class="bloc_film" data-category="category2">
+            <div class="bf_titre">Category 2</div>
+            <div class="bf_mosaik">
+                <div class="tuiles"></div>
+                <button class="bf_voir_plus_bouton">Voir plus</button>
+            </div>
+        </div>
+
+        <div class="bloc_film" data-category="others">
+            <div class="bf_titre_autre">
+                <div class="bf_titre">Autres</div>
+                <div class="bf_menu">
+                    <ul id="genres"></ul>
+                </div>
+            </div>
+            <div class="bf_mosaik">
+                <div class="tuiles">
+                    <button class="bf_voir_plus_bouton">Voir plus</button>
+                </div>
+            </div>
+        </div>
     </main>
 
+    <div id="modale" class="modale hidden_modale">
+        <div class="content">
+            <div class="top">
+                <div class="top_text">
+                    <div class="top_info">
+                        <div class="top_info_tit"></div>
+                        <div class="top_info_text"></div>
+                    </div>
+                    <div class="top_real">
+                        <div class="top_real_tit">Réalisé par:</div>
+                        <div class="top_real_text"></div>
+                    </div>
+                </div>
+                <div class="modal_desktop_pic"><img src=""></div>
+                <button id="iconCloseModal" class="icon_close_modal">X</button>
+            </div>
+            <div class="desc_text"></div>
+            <div class="modal_tab_mob_pic"><img src=""></div>
+            <div class="desc_avec">
+                <div class="desc_avec_tit">Avec:</div>
+                <div class="desc_avec_text"></div>
+            </div>
+            <button id="btnCloseModal" class="btn_close_modal">Fermer</button>
+        </div>
+    </div>
 </body>
 
 </html>

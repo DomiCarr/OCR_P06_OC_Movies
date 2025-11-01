@@ -9,6 +9,14 @@
 //
 // --------------------------------------------------
 //
+async function buildPageContent() {
+    const mystery = await extractMoviesByGenre("Mystery");
+    generateTiles("Mystery", mystery, "#mainContent");
+
+    const comedy = await extractMoviesByGenre("Comedy");
+    generateTiles("Comedy", comedy, "#mainContent");
+}
+
 async function initApp() {
     try {
         const genres = await getAllGenres();

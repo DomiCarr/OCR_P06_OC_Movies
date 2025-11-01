@@ -46,6 +46,17 @@ function listenEvents(genres) {
         });
     });
 
+    // dynamic movie detail buttons (inside generated tiles)
+    // Select all tile detail buttons and iterate over them
+    document.querySelectorAll(".tuile_bloctexte_button").forEach((btn) => {
+
+        // Add click event to open modal for the selected movie
+        btn.addEventListener("click", () => {
+            const movieId = btn.dataset.id;
+            Toggle_modale(movieId);
+        });
+    });
+
     // Initialize and manage the genre menu behavior (hover, click, display)
     manageMenu(genres);
 }
