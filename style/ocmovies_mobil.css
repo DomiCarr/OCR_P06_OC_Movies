@@ -149,6 +149,7 @@
 
     .bf_vignette_desc_bouton {
         margin-left: auto;
+        margin-right: auto;
         background-color: #FA0B0B;
         border-radius: 25px;
         padding-left: 20px;
