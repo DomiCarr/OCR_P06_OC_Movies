@@ -15,4 +15,4 @@ for f in style/*.css; do
   echo "\n\n" >> code.txt
 done
 
-echo "✅ Concaténation terminée → code.txt généré"
+echo " Concaténation terminée → code.txt généré"

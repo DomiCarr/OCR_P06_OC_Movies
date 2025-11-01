@@ -9,6 +9,15 @@
     <link rel="stylesheet" href="./style/ocmovies_desktop.css">
     <link rel="stylesheet" href="./style/ocmovies_tablet.css">
     <link rel="stylesheet" href="./style/ocmovies_mobil.css">
+    <script src="scripts/config.js" defer></script>
+    <script src="scripts/api/rest_api.js" defer></script>
+
+    <script src="scripts/ui/modal.js" defer></script>
+    <script src="scripts/ui/menu.js" defer></script>
+
+    <script src="scripts/events.js" defer></script>
+    <script src="scripts/main.js" defer></script>
+
     <title>Document</title>
 </head>
 
@@ -22,1171 +31,500 @@
         </div>
     </header>
 
-    <main>
-        <div class="bloc_film">
-            <div class="bf_titre">Meilleur film</div>
-            <div class="bf_vignette">
-                <div class="bf_vignette_pic">
-                    <img src="./assets/pictures/lebowski 1.png">
-                </div>
-                <div class="bf_vignette_desc">
-                    <div class="bf_vignette_desc_titre">The Big Lebowski</div>
-                    <div class="bf_vignette_desc_texte">Jeff "The Dude" Lebowski, mistaken for a millionaire of
-                        the same name, seeks restitution for his ruined rug and
-                        enlists his bowling buddies to help get it.</div>
-                    <buton class="bf_vignette_desc_bouton">
-                        Détails
-                    </buton>
-                </div>
-            </div>
-        </div>
-
-        <div class="bloc_film">
-            <div class="bf_titre">Films les mieux notés</div>
-            <div class="bf_mosaik">
-                <div class="tuiles">
-                    <div class="tuile_1">
-                        <div class="tuile_pic">
-                            <img src="./assets/pictures/titanic 1.png">
-                        </div>
-                        <div class="tuile_bloctexte">
-                            <div class="tuile_bloctexte_texte">Titanic</div>
-                            <button class="tuile_bloctexte_button">Détails</button>
-                        </div>
-                    </div>
-
-                    <div class="tuile_1">
-                        <div class="tuile_pic">
-                            <img src="./assets/pictures/backtofuture 1.png">
-                        </div>
-                        <div class="tuile_bloctexte">
-                            <div class="tuile_bloctexte_texte">Retour vers le futur</div>
-                            <button class="tuile_bloctexte_button">Détails</button>
-                        </div>
-                    </div>
-
-                    <div class="tuile_2">
-                        <div class="tuile_pic">
-                            <img src="./assets/pictures/scarface 1.png">
-                        </div>
-                        <div class="tuile_bloctexte">
-                            <div class="tuile_bloctexte_texte">Scarface</div>
-                            <button class="tuile_bloctexte_button">Détails</button>
-                        </div>
-                    </div>
-
-                    <div class="tuile_2">
-                        <div class="tuile_pic">
-                            <img src="./assets/pictures/pulpfiction 1.png">
-                        </div>
-                        <div class="tuile_bloctexte">
-                            <div class="tuile_bloctexte_texte">Pulp Fiction</div>
-                            <button class="tuile_bloctexte_button">Détails</button>
-                        </div>
-                    </div>
-
-                    <div class="tuile_3">
-                        <div class="tuile_pic">
-                            <img src="./assets/pictures/godfather 1.png">
-                        </div>
-                        <div class="tuile_bloctexte">
-                            <div class="tuile_bloctexte_texte">Le Parrain</div>
-                            <button class="tuile_bloctexte_button">Détails</button>
-                        </div>
-                    </div>
-
-                    <div class="tuile_3">
-                        <div class="tuile_pic">
-                            <img src="./assets/pictures/alien 1.png">
-                        </div>
-                        <div class="tuile_bloctexte">
-                            <div class="tuile_bloctexte_texte">Alien</div>
-                            <button class="tuile_bloctexte_button">Détails</button>
-                        </div>
-                    </div>
-                </div>
-                <buton class="bf_voir_plus_bouton">
-                    Voir plus
-                </buton>
-
-            </div>
-        </div>
-
-        <div class="bloc_film">
-            <div class="bf_titre">Mystery</div>
-            <div class="bf_mosaik">
-                <div class="tuiles">
-                    <div class="tuile_1">
-                        <div class="tuile_pic">
-                            <img src="./assets/pictures/titanic 1.png">
-                        </div>
-                        <div class="tuile_bloctexte">
-                            <div class="tuile_bloctexte_texte">Titanic</div>
-                            <button class="tuile_bloctexte_button">Détails</button>
-                        </div>
-                    </div>
-
-                    <div class="tuile_1">
-                        <div class="tuile_pic">
-                            <img src="./assets/pictures/backtofuture 1.png">
-                        </div>
-                        <div class="tuile_bloctexte">
-                            <div class="tuile_bloctexte_texte">Retour vers le futur</div>
-                            <button class="tuile_bloctexte_button">Détails</button>
-                        </div>
-                    </div>
-
-                    <div class="tuile_2">
-                        <div class="tuile_pic">
-                            <img src="./assets/pictures/scarface 1.png">
-                        </div>
-                        <div class="tuile_bloctexte">
-                            <div class="tuile_bloctexte_texte">Scarface</div>
-                            <button class="tuile_bloctexte_button">Détails</button>
-                        </div>
-                    </div>
-
-                    <div class="tuile_2">
-                        <div class="tuile_pic">
-                            <img src="./assets/pictures/pulpfiction 1.png">
-                        </div>
-                        <div class="tuile_bloctexte">
-                            <div class="tuile_bloctexte_texte">Pulp Fiction</div>
-                            <button class="tuile_bloctexte_button">Détails</button>
-                        </div>
-                    </div>
-
-                    <div class="tuile_3">
-                        <div class="tuile_pic">
-                            <img src="./assets/pictures/godfather 1.png">
-                        </div>
-                        <div class="tuile_bloctexte">
-                            <div class="tuile_bloctexte_texte">Le Parrain</div>
-                            <button class="tuile_bloctexte_button">Détails</button>
-                        </div>
-                    </div>
-
-                    <div class="tuile_3">
-                        <div class="tuile_pic">
-                            <img src="./assets/pictures/alien 1.png">
-                        </div>
-                        <div class="tuile_bloctexte">
-                            <div class="tuile_bloctexte_texte">Alien</div>
-                            <button class="tuile_bloctexte_button">Détails</button>
-                        </div>
-                    </div>
-                </div>
-                <buton class="bf_voir_plus_bouton">
-                    Voir plus
-                </buton>
-
-            </div>
-        </div>
-
-        <div class="bloc_film">
-            <div class="bf_titre">Category 2</div>
-            <div class="bf_mosaik">
-                <div class="tuiles">
-
-                    <div class="tuile_1">
-                        <div class="tuile_pic">
-                            <img src="./assets/pictures/titanic 1.png">
-                        </div>
-                        <div class="tuile_bloctexte">
-                            <div class="tuile_bloctexte_texte">Titanic</div>
-                            <button class="tuile_bloctexte_button">Détails</button>
-                        </div>
-                    </div>
-
-                    <div class="tuile_1">
-                        <div class="tuile_pic">
-                            <img src="./assets/pictures/backtofuture 1.png">
-                        </div>
-                        <div class="tuile_bloctexte">
-                            <div class="tuile_bloctexte_texte">Retour vers le futur</div>
-                            <button class="tuile_bloctexte_button">Détails</button>
-                        </div>
-                    </div>
-
-                    <div class="tuile_2">
-                        <div class="tuile_pic">
-                            <img src="./assets/pictures/scarface 1.png">
-                        </div>
-                        <div class="tuile_bloctexte">
-                            <div class="tuile_bloctexte_texte">Scarface</div>
-                            <button class="tuile_bloctexte_button">Détails</button>
-                        </div>
-                    </div>
-
-                    <div class="tuile_2">
-                        <div class="tuile_pic">
-                            <img src="./assets/pictures/pulpfiction 1.png">
-                        </div>
-                        <div class="tuile_bloctexte">
-                            <div class="tuile_bloctexte_texte">Pulp Fiction</div>
-                            <button class="tuile_bloctexte_button">Détails</button>
-                        </div>
-                    </div>
-
-                    <div class="tuile_3">
-                        <div class="tuile_pic">
-                            <img src="./assets/pictures/godfather 1.png">
-                        </div>
-                        <div class="tuile_bloctexte">
-                            <div class="tuile_bloctexte_texte">Le Parrain</div>
-                            <button class="tuile_bloctexte_button">Détails</button>
-                        </div>
-                    </div>
-
-                    <div class="tuile_3">
-                        <div class="tuile_pic">
-                            <img src="./assets/pictures/alien 1.png">
-                        </div>
-                        <div class="tuile_bloctexte">
-                            <div class="tuile_bloctexte_texte">Alien</div>
-                            <button class="tuile_bloctexte_button">Détails</button>
-                        </div>
-                    </div>
-                </div>
-                <buton class="bf_voir_plus_bouton">
-                    Voir plus
-                </buton>
-
-
-            </div>
-        </div>
-
-        <div class="bloc_film">
-            <div class="bf_titre">Autres</div>
-            <div class="bf_mosaik">
-                <div class="tuiles">
-
-                    <div class="tuile_1">
-                        <div class="tuile_pic">
-                            <img src="./assets/pictures/titanic 1.png">
-                        </div>
-                        <div class="tuile_bloctexte">
-                            <div class="tuile_bloctexte_texte">Titanic</div>
-                            <button class="tuile_bloctexte_button">Détails</button>
-                        </div>
-                    </div>
-
-                    <div class="tuile_1">
-                        <div class="tuile_pic">
-                            <img src="./assets/pictures/backtofuture 1.png">
-                        </div>
-                        <div class="tuile_bloctexte">
-                            <div class="tuile_bloctexte_texte">Retour vers le futur</div>
-                            <button class="tuile_bloctexte_button">Détails</button>
-                        </div>
-                    </div>
-
-                    <div class="tuile_2">
-                        <div class="tuile_pic">
-                            <img src="./assets/pictures/scarface 1.png">
-                        </div>
-                        <div class="tuile_bloctexte">
-                            <div class="tuile_bloctexte_texte">Scarface</div>
-                            <button class="tuile_bloctexte_button">Détails</button>
-                        </div>
-                    </div>
-
-                    <div class="tuile_2">
-                        <div class="tuile_pic">
-                            <img src="./assets/pictures/pulpfiction 1.png">
-                        </div>
-                        <div class="tuile_bloctexte">
-                            <div class="tuile_bloctexte_texte">Pulp Fiction</div>
-                            <button class="tuile_bloctexte_button">Détails</button>
-                        </div>
-                    </div>
-
-                    <div class="tuile_3">
-                        <div class="tuile_pic">
-                            <img src="./assets/pictures/godfather 1.png">
-                        </div>
-                        <div class="tuile_bloctexte">
-                            <div class="tuile_bloctexte_texte">Le Parrain</div>
-                            <button class="tuile_bloctexte_button">Détails</button>
-                        </div>
-                    </div>
-
-                    <div class="tuile_3">
-                        <div class="tuile_pic">
-                            <img src="./assets/pictures/alien 1.png">
-                        </div>
-                        <div class="tuile_bloctexte">
-                            <div class="tuile_bloctexte_texte">Alien</div>
-                            <button class="tuile_bloctexte_button">Détails</button>
-                        </div>
-                    </div>
-                </div>
-
-                <buton class="bf_voir_plus_bouton">
-                    Voir plus
-                </buton>
-            </div>
-        </div>
+    <main id="mainContent">
 
     </main>
 
-    <div class="modale hidden_modale">
-        <div class="content">
-            <div class="top">
-                <div class="top_text">
-                    <div class="top_info">
-                        <div class="top_info_tit">
-                            The Big Lebowski
-                        </div>
-                        <div class="top_info_text">
-                            <p>1998 - Comedy, Crime, Sport</p>
-                            <p>PG-13 - 117 minutes (USA / UK)</p>
-                            <p>IMDB score: 8.1/10</p>
-                            <p>Recettes au box-office: $48.2m</p>
-                        </div>
-                    </div>
-                    <div class="top_real">
-                        <div class="top_real_tit">
-                            Réalisé par:
-                        </div>
-                        <div class="top_real_text">
-                            Joel Cohen, Ethan Cohen
-                        </div>
-                    </div>
-                </div>
-                <div class="header_pic">
-                    <img src="./assets/pictures/lebowski 1.png">
-                </div>
-            </div>
-            <div class="desc_text">
-                When "the dude" Lebowski is mistaken for a millionaire Lebowski, two thugs urinate on his rug to coerce
-                him
-                into paying a debt he knows nothing about. While attempting to gain recompense for the ruined rug from
-                his
-                wealthy counterpart, he accepts a one-time job with high pay-off. He enlists the help of his bowling
-                buddy,
-                Walter, a gun-toting Jewish-convert with anger issues. Deception leads to more trouble, and it soon
-                seems
-                that everyone from porn empire tycoons to nihilists want something from The Dude.
-            </div>
-            <div class="desc_avec">
-                <div class="desc_avec_tit">Avec:</div>
-                <div class="desc_avec_text">
-                    David Huddleston, Flea, Jack Kehler, Jeff Bridges, Jimmie Dale Gilmore, John Goodman, John Turturro,
-                    Julianne Moore, Mark Pellegrino, Peter Stormare, Philip Moon, Philip Seymour Hoffman, Steve Buscemi,
-                    Tara
-                    Reid, Torsten Voges
-                </div>
-            </div>
-
-            <button class="desc_button" onclick="window.close();">
-                Fermer
-            </button>
-        </div>
-    </div>
 </body>
 
 </html>
 
 
-===== style/ocmovies_desktop.css =====
-/* Desktop (789px → ) */
-@media (min-width: 1025px) {
+===== ./scripts/api/rest_api.js =====
+// rest_api.js
+//
+// Exchange with API_REST functions
+//
 
-    /* Reinitialisation navigateur */
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        list-style: none;
-        text-decoration: none;
+// --------------------------------------------------
+// Extract genres from API page
+//
+// input: - data : JSON object from API response
+// output: - list of genres [{id, name}] extracted from page
+//
+// --------------------------------------------------
+//
+function extractGenresFromPage(data) {
+    const list = data.results;
+    const genres = [];
+
+    for (let i = 0; i < list.length; i++) {
+        genres.push({
+            id: list[i].id,
+            name: list[i].name
+        });
+    }
+    return genres;
+}
+
+// --------------------------------------------------
+// Fetch all genres from API
+//
+// input: - uses global genresUrl
+// output: - Promise resolving to array of all genres [{id, name}]
+//
+// --------------------------------------------------
+//
+async function getAllGenres() {
+    // Initialize an empty array to store all genres from all pages
+    let allGenres = [];
+
+    // Start fetching from the first page
+    let page = 1;
+
+    // Flag to control the loop: true if there is a next page
+    let hasNext = true;
+
+    // Loop until there are no more genre pages
+    while (hasNext) {
+        try {
+            // For the current genre page:
+            // Send an HTTP GET request to REST_API and wait for the response
+            // `fetch()` returns a Promise for the response
+            // `await` pauses execution until the Promise resolves, giving the Response object
+            const response = await fetch(`${genresUrl}?page=${page}`);
+
+            // Throw an error to be caught by the catch block
+            // if the HTTP response status is not OK
+            if (!response.ok) {
+                throw new Error("HTTP error: " + response.status);
+            }
+
+            // Parse the HTTP response as JSON:
+            // `await` ensures the code waits until the JSON is fully read and converted
+            // into a JavaScript object before assigning it to `data`
+            const data = await response.json();
+
+            // Extract genres from the current page
+            const genres = extractGenresFromPage(data);
+
+            // Append the current page's genres to the full list
+            allGenres = allGenres.concat(genres);
+
+            // Check if there is another page of results in the API
+            // data.next is a field in the JSON returned by the API for this page
+            // It contains the URL of the next page, or null if there are no more pages
+            // We set hasNext to true/false accordingly to control the loop
+            hasNext = data.next !== null;
+
+            // Move to the next page number
+            page++;
+        } catch (error) {
+            // Log any fetch or parsing errors and stop the loop
+            console.error("Error fetching page", page, error);
+            hasNext = false;
+        }
     }
 
-    body {
-        margin-top: 60px;
-        margin-left: 100px;
-        margin-right: 100px;
+    // Log all collected genres for debugging
+    console.log(allGenres);
+
+    // Return the full array of genres
+    return allGenres;
+}
+// --------------------------------------------------
+// Extract first 6 movies for a given genre, fetching next pages if needed
+//
+// input: - genre : string
+// output: - movies: array of up to 6 movies [{id, title, image_url}]
+//
+// --------------------------------------------------
+//
+async function extractMoviesByGenre(genre) {
+    console.log("Fetching movies for genre:", genre);
+
+    let movies = [];
+    let pageUrl = `${titlesUrl}?genre=${encodeURIComponent(genre)}&page=1`;
+
+    while (movies.length < 6 && pageUrl) {
+        const response = await fetch(pageUrl);
+        console.log("HTTP response status:", response.status);
+
+        const data = await response.json();
+        console.log("Movies returned by API this page:", data.results.length);
+
+        // Add movies from this page
+        for (let m of data.results) {
+            movies.push({
+                id: m.id,
+                title: m.title,
+                image_url: m.image_url
+            });
+            console.log(`Processed movie: ${m.title}`);
+            if (movies.length >= 6) break;
+        }
+
+        // Prepare next page if needed
+        pageUrl = movies.length < 6 ? data.next : null;
     }
 
-    header {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        background-color: #61787F;
-    }
-
-    .header_pic {
-        margin: 15px;
-    }
-
-    .header_text {
-        margin-left: 40px;
-        font-family: "Oswald", sans-serif;
-        color: white;
-        font-size: 40px;
-        /* Light */
-        font-weight: 300;
-    }
-
-    main {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .bloc_film {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .bf_titre,
-    .bf_vignette_desc_titre {
-        font-family: "Oswald", sans-serif;
-        color: black;
-        font-size: 48px;
-        /* Semi-bold */
-        font-weight: 600;
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
-
-    .bf_vignette {
-        padding: 10px;
-        display: flex;
-        flex-direction: row;
-        border-style: solid;
-        border-color: black;
-        border-width: 5px;
-    }
-
-    .bf_vignette_desc {
-        padding: 10px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-
-    .bf_vignette_desc_texte {
-        align-self: center;
-        font-family: "Oswald", sans-serif;
-        color: black;
-        font-size: 28px;
-        /* ExtraLight */
-        font-weight: 200;
-    }
-
-    .bf_vignette_desc_bouton {
-        margin-left: auto;
-        background-color: #FA0B0B;
-        border-radius: 25px;
-        padding-left: 50px;
-        padding-right: 50px;
-        padding-top: 15px;
-        padding-bottom: 15px;
-        font-family: "Oswald", sans-serif;
-        color: white;
-        font-size: 24px;
-        /* Medium */
-        font-weight: 500;
-    }
-
-    .bf_mosaik {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
-
-    .tuiles {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap: 20px;
-    }
-
-
-    .tuile_1,
-    .tuile_2,
-    .tuile_3 {
-        position: relative;
-        height: 252px;
-        width: 247px;
-    }
-
-    .bf_voir_plus_bouton {
-        display: none;
-    }
-
-    .tuile_bloctexte {
-        background-color: rgba(0, 0, 0, 0.5);
-        position: absolute;
-        left: 0;
-        top: 40px;
-        padding: 15px;
-        height: 120px;
-        width: 251px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-
-    .tuile_bloctexte_texte {
-        font-family: "Oswald", sans-serif;
-        color: white;
-        /* Semi-bold */
-        font-size: 24px;
-        font-weight: 600;
-        align-self: flex-start;
-    }
-
-    .tuile_bloctexte_button {
-        font-family: "Oswald", sans-serif;
-        color: white;
-        font-size: 14px;
-        /* Medium */
-        font-weight: 500;
-        background-color: black;
-        border-radius: 25px;
-        padding: 5px;
-        align-self: flex-end;
-    }
-
-    .modale {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-color: rgba(0, 0, 0, 0.9);
-        padding: 50px;
-    }
-
-
-    .hidden_modale {
-        display: none;
-    }
-
-    .content {
-        background-color: white;
-        padding: 20px;
-        border-style: solid;
-        border-color: black;
-        font-family: "Oswald", sans-serif;
-        color: black;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-
-    .top {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-    }
-
-    .header_pic {
-        margin: 15px;
-    }
-
-    .top_text {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-    }
-
-    .top_real {
-        margin-top: auto;
-        margin-bottom: auto;
-    }
-
-    .top_info_tit {
-        font-size: 48px;
-        /* Semi-bold */
-        font-weight: 600;
-    }
-
-    .top_info_text {
-        font-size: 24px;
-        /* Semi-bold */
-        font-weight: 600;
-    }
-
-    .top_real_tit {
-        font-size: 24px;
-        /* Regular */
-        font-weight: 400;
-    }
-
-    .top_real_text {
-        font-size: 24px;
-        /* Light */
-        font-weight: 300;
-    }
-
-    .desc_text {
-        font-size: 24px;
-        /* Light */
-        font-weight: 300;
-    }
-
-    .desc_avec_tit {
-        font-size: 20px;
-        /* Regular */
-        font-weight: 400;
-    }
-
-    .desc_avec_text {
-        font-size: 20px;
-        /* Light */
-        font-weight: 300;
-    }
-
-    .desc_button {
-        margin-left: auto;
-        margin-right: auto;
-        background-color: #FA0B0B;
-        border-color: #FA0B0B;
-        border-radius: 10px;
-        padding: 10px;
-        font-family: "Oswald", sans-serif;
-        color: white;
-        font-size: 20px;
-        /* Medium */
-        font-weight: 500;
-    }
-
+    console.log("Movies array ready:", movies);
+    return movies;
 }
 
 
-===== style/ocmovies_mobil.css =====
-/* Desktop (789px → ) */
-@media (max-width: 788px) {
 
-    /* Reinitialisation navigateur */
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        list-style: none;
-        text-decoration: none;
-    }
+===== ./scripts/config.js =====
+// config.js
+//
+// Configuration file for global constants and variables
+// Contains API URLs and application-wide settings
+//
 
-    body {
-        margin-top: 60px;
-        margin-left: 110px;
-        margin-right: 110px;
-    }
 
-    header {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        background-color: #61787F;
-    }
+// URL of the REST API for genres
+const genresUrl = "http://localhost:8000/api/v1/genres/";
 
-    .header_pic {
-        margin: 15px;
-    }
+// URL of the REST API for movie titles
+const titlesUrl = "http://localhost:8000/api/v1/titles/";
 
-    .header_text {
-        margin-left: 40px;
-        font-family: "Oswald", sans-serif;
-        color: white;
-        font-size: 40px;
-        /* Light */
-        font-weight: 300;
-    }
+// Global variable to store the currently selected genre
+let selectedGenre = "";
 
-    main {
-        display: flex;
-        flex-direction: column;
-    }
 
-    .bloc_film {
-        display: flex;
-        flex-direction: column;
-    }
 
-    .bf_titre,
-    .bf_vignette_desc_titre {
-        font-family: "Oswald", sans-serif;
-        color: black;
-        font-size: 32px;
-        /* Semi-bold */
-        font-weight: 600;
-    }
 
-    .bf_vignette {
-        padding: 10px;
-        display: flex;
-        flex-direction: column;
-        border-style: solid;
-        border-color: black;
-        border-width: 5px;
-    }
 
-    .bf_vignette_desc {
-        padding: 10px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
+===== ./scripts/events.js =====
+//events.js
+//
+// Manage event listeners for user interactions: button clicks, menu hovers, etc.
 
-    .bf_vignette_desc_texte {
-        align-self: center;
-        font-family: "Oswald", sans-serif;
-        color: black;
-        font-size: 28px;
-        /* ExtraLight */
-        font-weight: 200;
-    }
+// --------------------------------------------------
+// Initialize event listeners for UI interactions
+//
+// input: - genres: list of genres from API_REST
+// output: - DOM updated with click/hover handlers
+//
+// --------------------------------------------------
+//
+function listenEvents(genres) {
+    // movie detail button
+    const btnDetails = document.querySelector("#btnDetails");
+    btnDetails.addEventListener("click", () => Toggle_modale());
 
-    .bf_vignette_desc_bouton {
-        margin-left: auto;
-        background-color: #FA0B0B;
-        border-radius: 25px;
-        padding-left: 20px;
-        padding-right: 20px;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        font-family: "Oswald", sans-serif;
-        color: white;
-        font-size: 14px;
-        /* Medium */
-        font-weight: 500;
-    }
+    // close modal button
+    const btnCloseModal = document.querySelector("#btnCloseModal");
+    btnCloseModal.addEventListener("click", () => Toggle_modale());
 
-    .bf_mosaik {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        height: 100%
-    }
+    // close modal icon
+    const iconCloseModal = document.querySelector("#iconCloseModal");
+    iconCloseModal.addEventListener("click", () => Toggle_modale());
 
-    .tuiles {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap: 20px;
-    }
+    // "voir plus" buttons
+    // Select all "Voir plus" buttons and iterate over them
+    document.querySelectorAll(".bf_voir_plus_bouton").forEach((btn) => {
 
-    .tuile_1 {
-        position: relative;
-        height: 329px;
-        width: 318px;
-    }
+        // Add a click event listener to toggle the display of extra tiles
+        btn.addEventListener("click", () => {
 
-    .tuile_2,
-    .tuile_3 {
-        display: none;
-    }
+            // Find the parent container (.bf_mosaik) that holds the tiles
+            const bloc = btn.closest(".bf_mosaik");
 
-    .tuile_bloctexte {
-        background-color: rgba(0, 0, 0, 0.5);
-        position: absolute;
-        left: 0;
-        top: 40px;
-        padding: 15px;
-        height: 120px;
-        width: 251px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
+            // Toggle a class to show or hide all tiles in the container
+            bloc.classList.toggle("show_all_tiles");
 
-    .tuile_bloctexte_texte {
-        font-family: "Oswald", sans-serif;
-        color: white;
-        /* Semi-bold */
-        font-size: 24px;
-        font-weight: 600;
-        align-self: flex-start;
-    }
+            // If the container has the class "show_all_tiles", set button text to "Voir moins"
+            // Otherwise, set it to "Voir plus"
+            if (bloc.classList.contains("show_all_tiles")) {
+                btn.textContent = "Voir moins";
+            } else {
+                btn.textContent = "Voir plus";
+            }
+        });
+    });
 
-    .tuile_bloctexte_button {
-        font-family: "Oswald", sans-serif;
-        color: white;
-        font-size: 14px;
-        /* Medium */
-        font-weight: 500;
-        background-color: black;
-        border-radius: 25px;
-        padding: 5px;
-        align-self: flex-end;
-    }
-
-    .bf_voir_plus_bouton {
-        background-color: #FA0B0B;
-        border-radius: 25px;
-        padding-left: 20px;
-        padding-right: 20px;
-        padding-top: 5px;
-        padding-bottom: 5px;
-        font-family: "Oswald", sans-serif;
-        color: white;
-        font-size: 14px;
-        /* Medium */
-        font-weight: 500;
-    }
-
-    .modale {
-        width: 506px;
-        height: 1684px;
-        margin-top: 50px;
-        margin-left: 100px;
-        padding: 15px;
-        border-style: solid;
-        border-color: black;
-        font-family: "Oswald", sans-serif;
-        color: black;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-    }
-
-    .top {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .header_pic {
-        margin: 15px;
-    }
-
-    .top_text {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-    }
-
-    .top_real {
-        padding-top: 20px;
-        padding-bottom: 20px;
-        margin-top: auto;
-        margin-bottom: auto;
-    }
-
-    .top_info_tit {
-        font-size: 48px;
-        /* Semi-bold */
-        font-weight: 600;
-    }
-
-    .top_info_text {
-        font-size: 24px;
-        /* Semi-bold */
-        font-weight: 600;
-    }
-
-    .top_real_tit {
-        font-size: 24px;
-        /* Regular */
-        font-weight: 400;
-    }
-
-    .top_real_text {
-        font-size: 24px;
-        /* Light */
-        font-weight: 300;
-    }
-
-    .desc_text {
-        padding: 20px;
-        font-size: 24px;
-        /* Light */
-        font-weight: 300;
-    }
-
-    .desc_avec {
-        padding: 20px;
-    }
-
-    .desc_avec_tit {
-        font-size: 20px;
-        /* Regular */
-        font-weight: 400;
-    }
-
-    .desc_avec_text {
-        font-size: 20px;
-        /* Light */
-        font-weight: 300;
-    }
-
-    .desc_button {
-        display: none;
-    }
-
+    // Initialize and manage the genre menu behavior (hover, click, display)
+    manageMenu(genres);
 }
 
 
-===== style/ocmovies_tablet.css =====
-/* Desktop (789px → ) */
-@media (min-width: 789px) and (max-width:1024px) {
 
-    /* Reinitialisation navigateur */
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        list-style: none;
-        text-decoration: none;
+===== ./scripts/main.js =====
+// main.js
+//
+
+// --------------------------------------------------
+// Initialize application
+//
+// input: - none (uses global config & API)
+// output: - generate page and event listeners
+//
+// --------------------------------------------------
+//
+async function initApp() {
+    try {
+        const genres = await getAllGenres();
+        generateMenu(genres);
+        listenEvents(genres);
+
+        // ===== TEST TEMPORAIRE =====
+        const testGenre = "Mystery";
+        const movies = await extractMoviesByGenre(testGenre);
+        console.log("Test extractMoviesByGenre result:", movies);
+        // ===========================
+
+
+    } catch (error) {
+        console.error("Initialization error:", error);
     }
-
-    body {
-        width: 620;
-        margin-top: 60px;
-        margin-left: 110px;
-        margin-right: 110px;
-    }
-
-    header {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        background-color: #61787F;
-    }
-
-    .header_pic {
-        margin: 15px;
-    }
-
-    .header_text {
-        margin-left: 40px;
-        font-family: "Oswald", sans-serif;
-        color: white;
-        font-size: 40px;
-        /* Light */
-        font-weight: 300;
-    }
-
-    main {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .bloc_film {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .bf_titre,
-    .bf_vignette_desc_titre {
-        font-family: "Oswald", sans-serif;
-        color: black;
-        font-size: 40px;
-        /* Semi-bold */
-        font-weight: 600;
-        margin-top: 20px;
-        margin-bottom: 10px;
-    }
-
-    .bf_vignette {
-        padding: 10px;
-        display: flex;
-        flex-direction: row;
-        border-style: solid;
-        border-color: black;
-        border-width: 5px;
-    }
-
-    .bf_vignette_desc {
-        padding: 10px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-
-    .bf_vignette_desc_texte {
-        align-self: center;
-        font-family: "Oswald", sans-serif;
-        color: black;
-        font-size: 28px;
-        /* ExtraLight */
-        font-weight: 200;
-    }
-
-    .bf_vignette_desc_bouton {
-        margin-left: auto;
-        background-color: #FA0B0B;
-        border-radius: 22px;
-        padding-left: 30px;
-        padding-right: 30px;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        font-family: "Oswald", sans-serif;
-        color: white;
-        font-size: 20px;
-        /* Medium */
-        font-weight: 500;
-    }
-
-    .bf_mosaik {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        height: 100%
-    }
-
-    .tuiles {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap: 20px;
-    }
-
-    .tuile_1,
-    .tuile_2 {
-        position: relative;
-        height: 295px;
-        width: 286px;
-    }
-
-    .tuile_3 {
-        display: none;
-    }
-
-    .tuile_bloctexte {
-        background-color: rgba(0, 0, 0, 0.5);
-        position: absolute;
-        left: 0;
-        top: 40px;
-        padding: 15px;
-        height: 120px;
-        width: 251px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-
-    .tuile_bloctexte_texte {
-        font-family: "Oswald", sans-serif;
-        color: white;
-        /* Semi-bold */
-        font-size: 24px;
-        font-weight: 600;
-        align-self: flex-start;
-    }
-
-    .tuile_bloctexte_button {
-        font-family: "Oswald", sans-serif;
-        color: white;
-        font-size: 14px;
-        /* Medium */
-        font-weight: 500;
-        background-color: black;
-        border-radius: 25px;
-        padding: 5px;
-        align-self: flex-end;
-    }
-
-    .bf_voir_plus_bouton {
-        background-color: #FA0B0B;
-        border-radius: 22px;
-        padding-left: 30px;
-        padding-right: 30px;
-        padding-top: 5px;
-        padding-bottom: 5px;
-        font-family: "Oswald", sans-serif;
-        color: white;
-        font-size: 20px;
-        /* Medium */
-        font-weight: 500;
-    }
-
-    .modale {
-        width: 506px;
-        height: 1684px;
-        margin-top: 50px;
-        margin-left: 100px;
-        padding: 15px;
-        border-style: solid;
-        border-color: black;
-        font-family: "Oswald", sans-serif;
-        color: black;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-    }
-
-    .top {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .header_pic {
-        margin: 15px;
-    }
-
-    .top_text {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-    }
-
-    .top_real {
-        padding-top: 20px;
-        padding-bottom: 20px;
-        margin-top: auto;
-        margin-bottom: auto;
-    }
-
-    .top_info_tit {
-        font-size: 48px;
-        /* Semi-bold */
-        font-weight: 600;
-    }
-
-    .top_info_text {
-        font-size: 24px;
-        /* Semi-bold */
-        font-weight: 600;
-    }
-
-    .top_real_tit {
-        font-size: 24px;
-        /* Regular */
-        font-weight: 400;
-    }
-
-    .top_real_text {
-        font-size: 24px;
-        /* Light */
-        font-weight: 300;
-    }
-
-    .desc_text {
-        padding: 20px;
-        font-size: 24px;
-        /* Light */
-        font-weight: 300;
-    }
-
-    .desc_avec {
-        padding: 20px;
-    }
-
-    .desc_avec_tit {
-        font-size: 20px;
-        /* Regular */
-        font-weight: 400;
-    }
-
-    .desc_avec_text {
-        font-size: 20px;
-        /* Light */
-        font-weight: 300;
-    }
-
-    .desc_button {
-        display: none;
-    }
-
-
 }
+
+initApp();
+
+
+
+===== ./scripts/ui/menu.js =====
+// menu.js
+//
+// Functions to handle the genre menu and its interactive behavior
+//
+
+// Genres menu is open or closed
+let menuOuvert = false;
+
+// --------------------------------------------------
+// Generate genres menu
+//
+// input: - genres : list of genres from the API_REST
+// output: - DOM updated by the function
+//
+// --------------------------------------------------
+//
+function generateMenu(genres) {
+    // if no selected genre assign the first genre
+    if (!selectedGenre && genres.length > 0) {
+        selectedGenre = genres[0].name;
+    }
+
+    const ul = document.getElementById("genres");
+    ul.innerHTML = "";
+
+    for (let i = 0; i < genres.length; i++) {
+        const li = document.createElement("li");
+        li.textContent = genres[i].name;
+
+        // cursor changes as a hand on hover to visually indicate the item is clickable
+        li.style.cursor = "pointer";
+
+        // Attach click for every li:
+        // Click always selects the genre and closes the menu
+        li.addEventListener("click", () => {
+            updateSelectedGenre(li);
+            menuOuvert = false;
+            menuDisplay(false, genres);
+        });
+
+        // hide all except first
+        if (i !== 0) li.style.display = "none";
+
+        ul.appendChild(li);
+    }
+}
+
+// --------------------------------------------------
+// Update selected genre
+//
+// input: - clickedItem : <li> DOM element clicked by user
+// output: - DOM first item updated
+//         - selectedGenre global variable updated
+//
+// --------------------------------------------------
+//
+function updateSelectedGenre(clickedItem) {
+    const ul = document.getElementById("genres");
+    const firstItem = ul.querySelector("li");
+    firstItem.textContent = clickedItem.textContent;
+    selectedGenre = clickedItem.textContent;
+}
+
+// --------------------------------------------------
+// Display or hide genre menu
+//
+// input: - show : boolean, true = show menu, false = hide
+//        - genres : list of genres from the API_REST
+// output: - DOM updated: menu items shown/hidden, emoji set
+//
+// --------------------------------------------------
+//
+function menuDisplay(show, genres) {
+    const menuItems = document.querySelectorAll("#genres li");
+    if (menuItems.length <= 1) return;
+
+    for (let i = 1; i < menuItems.length; i++) {
+        menuItems[i].style.display = show ? "block" : "none";
+        menuItems[i].textContent = menuItems[i].textContent.replace(" ✅", "");
+        if (show && menuItems[i].textContent === selectedGenre) {
+            menuItems[i].textContent = selectedGenre + " ✅";
+        }
+    }
+
+    const firstItem = menuItems[0];
+    if (show) {
+        firstItem.textContent = genres[0].name;
+        if (selectedGenre === genres[0].name) {
+            firstItem.textContent = selectedGenre + " ✅";
+        }
+    } else {
+        firstItem.textContent = selectedGenre;
+    }
+}
+
+// --------------------------------------------------
+// Manage hover behavior on genre menu
+//
+// input: - genres : list of genres from the API_REST
+// output: - event listeners attached
+//         - DOM updated on hover enter/leave
+//
+// --------------------------------------------------
+//
+function manageMenu(genres) {
+    const menu = document.querySelector(".bf_menu");
+    if (!menu) return;
+
+    menu.addEventListener("mouseenter", () => {
+        menuOuvert = true;
+        const ul = document.getElementById("genres");
+        const firstItem = ul.querySelector("li");
+        firstItem.textContent = genres[0].name;
+        menuDisplay(true, genres);
+    });
+
+    menu.addEventListener("mouseleave", () => {
+        menuOuvert = false;
+        const ul = document.getElementById("genres");
+        const firstItem = ul.querySelector("li");
+        firstItem.textContent = selectedGenre;
+        menuDisplay(false, genres);
+    });
+}
+
+
+
+===== ./scripts/ui/modal.js =====
+// modal.js
+//
+
+// --------------------------------------------------
+// Toggle modal display
+//
+// input: - none
+// output: - DOM updated, modal shown or hidden
+//
+// --------------------------------------------------
+//
+function Toggle_modale() {
+    const mod = document.querySelector("#modale");
+    mod.classList.toggle("hidden_modale");
+}
+
+
+
+===== ./scripts/ui/tiles.js =====
+// --------------------------------------------------
+// Generate tiles HTML for a given category and list of movies
+//
+// input: - categoryName: string (ex: "Mystery")
+//        - movies: array [{id, title, image_url}]
+//        - containerSelector: string CSS selector of the container where to inject tiles
+// output: - DOM updated with tiles
+//
+// --------------------------------------------------
+//
+function generateTiles(categoryName, movies, containerSelector) {
+    const container = document.querySelector(containerSelector);
+    if (!container) {
+        console.error("Container not found:", containerSelector);
+        return;
+    }
+
+    // Create the bloc_film wrapper
+    const blocFilm = document.createElement("div");
+    blocFilm.className = "bloc_film";
+
+    // Category title
+    const bfTitre = document.createElement("div");
+    bfTitre.className = "bf_titre";
+    bfTitre.textContent = categoryName;
+    blocFilm.appendChild(bfTitre);
+
+    // Mosaic container
+    const bfMosaik = document.createElement("div");
+    bfMosaik.className = "bf_mosaik";
+
+    const tuilesDiv = document.createElement("div");
+    tuilesDiv.className = "tuiles";
+
+    // Generate each tile
+    for (let i = 0; i < movies.length; i++) {
+        const movie = movies[i];
+
+        // Assign tuile class based on index to match existing CSS (tuile_1, tuile_2, tuile_3)
+        const tuileClass = "tuile_" + ((i % 3) + 1);
+
+        const tuileDiv = document.createElement("div");
+        tuileDiv.className = tuileClass;
+
+        // Image container
+        const picDiv = document.createElement("div");
+        picDiv.className = "tuile_pic";
+        const img = document.createElement("img");
+        img.src = movie.image_url;
+        img.alt = movie.title;
+        picDiv.appendChild(img);
+
+        // Text + button container
+        const textDiv = document.createElement("div");
+        textDiv.className = "tuile_bloctexte";
+
+        const titleDiv = document.createElement("div");
+        titleDiv.className = "tuile_bloctexte_texte";
+        titleDiv.textContent = movie.title;
+
+        const button = document.createElement("button");
+        button.className = "tuile_bloctexte_button";
+        button.textContent = "Détails";
+        button.addEventListener("click", () => {
+            console.log("Clicked movie id:", movie.id);
+            // Ici tu pourras appeler la modale ou autre
+        });
+
+        textDiv.appendChild(titleDiv);
+        textDiv.appendChild(button);
+
+        // Assemble tile
+        tuileDiv.appendChild(picDiv);
+        tuileDiv.appendChild(textDiv);
+
+        // Add to tuiles container
+        tuilesDiv.appendChild(tuileDiv);
+    }
+
+    bfMosaik.appendChild(tuilesDiv);
+
+    // Voir plus button
+    const voirPlusBtn = document.createElement("button");
+    voirPlusBtn.className = "bf_voir_plus_bouton";
+    voirPlusBtn.textContent = "Voir plus";
+    bfMosaik.appendChild(voirPlusBtn);
+
+    // Append mosaic to blocFilm
+    blocFilm.appendChild(bfMosaik);
+
+    // Inject into page
+    container.appendChild(blocFilm);
+}
+
 
 
