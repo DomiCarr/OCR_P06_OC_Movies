@@ -1,34 +1,52 @@
 // main.js
 //
-
 // --------------------------------------------------
 // Initialize application
 //
 // input: - none (uses global config & API)
-// output: - generate page and event listeners
+// output: - generate page content and event listeners
 //
 // --------------------------------------------------
-//
-async function buildPageContent() {
-    const mystery = await extractMoviesByGenre("Mystery");
-    generateTiles("Mystery", mystery, "#mainContent");
+async function buildPageContent(genres) {
 
-    const comedy = await extractMoviesByGenre("Comedy");
-    generateTiles("Comedy", comedy, "#mainContent");
+    try {
+        // ----- Best movie (single top IMDB) -----
+        const bestMovie = await getBestMovie();
+        generateBestMovie(bestMovie);
+
+        // ----- Top rated (all genres) -----
+        const topRatedMovies = await extractBestMoviesByGenre("all");
+        generateTiles("top_rated", topRatedMovies);
+
+        // ----- Mystery Mosaik -----
+        const moviesMystery = await extractBestMoviesByGenre("Mystery");
+        generateTiles("category1", moviesMystery);
+
+        // ----- Comedy Mosaik -----
+        const moviesComedy = await extractBestMoviesByGenre("Comedy");
+        generateTiles("category2", moviesComedy);
+
+        // ----- Others Mosaik -----
+        const moviesOthers = await extractBestMoviesByGenre(genres[0].name);
+        generateTiles("others", moviesOthers);
+
+    } catch (error) {
+        console.error("Error building page content:", error);
+    }
 }
+
 
 async function initApp() {
     try {
+        // Fetch genres from API and generate menu
         const genres = await getAllGenres();
         generateMenu(genres);
+
+        // Build all page content dynamically
+        await buildPageContent(genres);
+
+        // Initialize event listeners after tiles are generated
         listenEvents(genres);
-
-        // ===== TEST TEMPORAIRE =====
-        const testGenre = "Mystery";
-        const movies = await extractMoviesByGenre(testGenre);
-        console.log("Test extractMoviesByGenre result:", movies);
-        // ===========================
-
 
     } catch (error) {
         console.error("Initialization error:", error);

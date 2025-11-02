@@ -1,6 +1,6 @@
 // menu.js
 //
-// Functions to handle the genre menu and its interactive behavior
+// Handle the genre menu and its interactive behavior
 //
 
 // Genres menu is open or closed

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
@@ -13,6 +13,7 @@
     <script src="scripts/api/rest_api.js" defer></script>
     <script src="scripts/ui/modal.js" defer></script>
     <script src="scripts/ui/menu.js" defer></script>
+    <script src="scripts/ui/tiles.js" defer></script>
     <script src="scripts/events.js" defer></script>
     <script src="scripts/main.js" defer></script>
 
@@ -22,58 +23,61 @@
 <body>
     <header>
         <div class="header_pic">
-            <img src="./assets/pictures/just_dream_it.png">
+            <img src="./assets/pictures/just_dream_it.png" alt="Logo OCMovies">
         </div>
-        <div class="header_text">
-            Vidéos à la demande
-        </div>
+        <div class="header_text">Vidéos à la demande</div>
     </header>
 
     <main>
+        <!-- Best movie -->
         <div class="bloc_film" data-category="best">
-            <div class="bf_titre">Meilleur film</div>
+            <div class="bf_titre">best</div>
             <div class="bf_vignette"></div>
         </div>
 
+        <!-- Best rated movies -->
         <div class="bloc_film" data-category="top_rated">
-            <div class="bf_titre">Films les mieux notés</div>
+            <div class="bf_titre">top_rated</div>
             <div class="bf_mosaik">
                 <div class="tuiles"></div>
                 <button class="bf_voir_plus_bouton">Voir plus</button>
             </div>
         </div>
 
+        <!-- Category 1 -->
         <div class="bloc_film" data-category="category1">
-            <div class=" bf_titre">Mystery</div>
+            <div class="bf_titre">Mystery</div>
             <div class="bf_mosaik">
                 <div class="tuiles"></div>
                 <button class="bf_voir_plus_bouton">Voir plus</button>
             </div>
         </div>
 
+        <!-- Category 2 -->
         <div class="bloc_film" data-category="category2">
-            <div class="bf_titre">Category 2</div>
+            <div class="bf_titre">Comedy</div>
             <div class="bf_mosaik">
                 <div class="tuiles"></div>
                 <button class="bf_voir_plus_bouton">Voir plus</button>
             </div>
         </div>
 
+        <!-- Others -->
         <div class="bloc_film" data-category="others">
             <div class="bf_titre_autre">
-                <div class="bf_titre">Autres</div>
+                <div class="bf_titre">others</div>
                 <div class="bf_menu">
                     <ul id="genres"></ul>
                 </div>
             </div>
             <div class="bf_mosaik">
-                <div class="tuiles">
-                    <button class="bf_voir_plus_bouton">Voir plus</button>
-                </div>
+                <div class="tuiles"></div>
+                <button class="bf_voir_plus_bouton">Voir plus</button>
             </div>
         </div>
     </main>
 
+    <!-- Modal: movie details -->
     <div id="modale" class="modale hidden_modale">
         <div class="content">
             <div class="top">
@@ -87,11 +91,11 @@
                         <div class="top_real_text"></div>
                     </div>
                 </div>
-                <div class="modal_desktop_pic"><img src=""></div>
+                <div class="modal_desktop_pic"><img src="" alt="Poster film"></div>
                 <button id="iconCloseModal" class="icon_close_modal">X</button>
             </div>
             <div class="desc_text"></div>
-            <div class="modal_tab_mob_pic"><img src=""></div>
+            <div class="modal_tab_mob_pic"><img src="" alt="Poster mobile"></div>
             <div class="desc_avec">
                 <div class="desc_avec_tit">Avec:</div>
                 <div class="desc_avec_text"></div>
