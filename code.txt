@@ -1,4 +1,4 @@
-Generated 2025-11-06 18:01:34
+Generated 2025-11-06 19:42:35
 
 
 
@@ -320,19 +320,35 @@ async function getMovieDetails(movieId) {
         // Normalize data for UI consumption
         const movie = {
             id: data.id,
+            url: data.url,
             title: data.title,
-            description: data.description,
-            image_url: data.image_url,
-            directors: data.directors || [],
-            actors: data.actors || [],
-            genres: data.genres || [],
+            original_title: data.original_title,
             year: data.year,
+            date_published: data.date_published,
+            duration: data.duration,
+            description: data.description,
+            long_description: data.long_description,
+            avg_vote: data.avg_vote,
             imdb_score: data.imdb_score,
-            country: data.country,
-            language: data.lang,
-            rating: data.rating,
+            votes: data.votes,
+            metascore: data.metascore,
+            budget: data.budget,
+            budget_currency: data.budget_currency,
+            usa_gross_income: data.usa_gross_income,
+            worldwide_gross_income: data.worldwide_gross_income,
+            reviews_from_users: data.reviews_from_users,
+            reviews_from_critics: data.reviews_from_critics,
+            image_url: data.image_url,
+            actors: data.actors || [],
+            directors: data.directors || [],
+            writers: data.writers || [],
+            genres: data.genres || [],
+            countries: data.countries || [],
+            languages: data.languages || [],
+            rated: data.rated,
             company: data.company
         };
+
 
         return movie;
 
@@ -386,7 +402,7 @@ let selectedGenre = "";
 function listenEvents(genres) {
     // movie detail button
     const btnDetails = document.querySelector("#btnDetails");
-    btnDetails.addEventListener("click", () => Toggle_modale());
+    btnDetails.addEventListener("click", () => Toggle_modale(movieId));
 
     // close modal button
     const btnCloseModal = document.querySelector("#btnCloseModal");
@@ -684,11 +700,85 @@ function manageMenu(genres) {
 //
 // --------------------------------------------------
 //
-function Toggle_modale() {
+async function Toggle_modale(movieId) {
     const mod = document.querySelector("#modale");
+
+    // if modale hiden : generate modal
+    console.log("mod classlist avant:", mod.classList)
+    if (mod.classList.contains("hidden_modale")) {
+        console.log("mod classlist dans if:", mod.classList)
+        console.log("APPEL generate modal movie Id:", movieId)
+        await generateModal(movieId)
+    }
+
+    // Toggle modal
     mod.classList.toggle("hidden_modale");
+    console.log("mod classlist apres:", mod.classList)
 }
 
+// --------------------------------------------------
+// Generate movie modal
+//
+// input: - movie id
+// output: - DOM updated with movie modal
+//
+// --------------------------------------------------
+//
+
+async function generateModal(movieId) {
+    console.log("generate modal movie Id:", movieId)
+    const modal = await getMovieDetails(movieId);
+    console.log("REST API modal:", modal)
+
+    const modalContainer = document.querySelector("content")
+    modalContainer.innerHTML = `
+            <div class="top">
+                <div class="top_text">
+                    <div class="top_info">
+                        <div class="top_info_tit">
+                            ${modal.title}
+                        </div>
+                        <div class="top_info_text">
+                            <p>${modal.year} - ${modal.genres}</p>
+                            <p>PG-13 - ${modal.duration} minutes (${modal.title} / ${modal.title})</p>
+                            <p>IMDB score: ${imbd_score}/10</p>
+                            <p>Recettes au box-office: $${modal.worldwide_gross_income / 1000000}</p>
+                        </div>
+                    </div>
+                    <div class="top_real">
+                        <div class="top_real_tit">
+                            Réalisé par:
+                        </div>
+                        <div class="top_real_text">
+                            ${modal.directors}
+                        </div>
+                    </div>
+                </div>
+                <div class="modal_desktop_pic">
+                    <img src="${modal.image_url}">
+                </div>
+                <button id="iconCloseModal" class="icon_close_modal">
+                    X
+                </button>
+            </div>
+            <div class="desc_text">
+                ${modal.description}
+            </div>
+            <div class="modal_tab_mob_pic">
+                <img src="${modal.image_url}">
+            </div>
+            <div class="desc_avec">
+                <div class="desc_avec_tit">Avec:</div>
+                <div class="desc_avec_text">
+                   ${modal.actors}
+                </div>
+            </div>
+
+            <button id="btnCloseModal" class="btn_close_modal">
+                Fermer
+            </button>
+    `;
+}
 
 
 ===========================================================================================

@@ -20,7 +20,7 @@ async function Toggle_modale(movieId) {
     if (mod.classList.contains("hidden_modale")) {
         console.log("mod classlist dans if:", mod.classList)
         console.log("APPEL generate modal movie Id:", movieId)
-        generateModal(movieId)
+        await generateModal(movieId)
     }
 
     // Toggle modal
@@ -42,19 +42,19 @@ async function generateModal(movieId) {
     const modal = await getMovieDetails(movieId);
     console.log("REST API modal:", modal)
 
-    const modalContainer = document.querySelector("content")
+    const modalContainer = document.querySelector("#modale .content")
     modalContainer.innerHTML = `
             <div class="top">
                 <div class="top_text">
                     <div class="top_info">
                         <div class="top_info_tit">
-                            ${title}
+                            ${modal.title}
                         </div>
                         <div class="top_info_text">
-                            <p>${year} - ${genres}</p>
-                            <p>PG-13 - ${duration} minutes (${title} / ${title})</p>
-                            <p>IMDB score: ${imbd_score}/10</p>
-                            <p>Recettes au box-office: $${worldwide_gross_income / 1000000}</p>
+                            <p>${modal.year} - ${modal.genres}</p>
+                            <p>PG-13 - ${modal.duration} minutes (${modal.title} / ${modal.title})</p>
+                            <p>IMDB score: ${modal.imdb_score}/10</p>
+                            <p>Recettes au box-office: $${modal.worldwide_gross_income / 1000000}</p>
                         </div>
                     </div>
                     <div class="top_real">
@@ -62,27 +62,27 @@ async function generateModal(movieId) {
                             Réalisé par:
                         </div>
                         <div class="top_real_text">
-                            ${directors}
+                            ${modal.directors}
                         </div>
                     </div>
                 </div>
                 <div class="modal_desktop_pic">
-                    <img src="${image_url}">
+                    <img src="${modal.image_url}">
                 </div>
                 <button id="iconCloseModal" class="icon_close_modal">
                     X
                 </button>
             </div>
             <div class="desc_text">
-                ${description}
+                ${modal.description}
             </div>
             <div class="modal_tab_mob_pic">
-                <img src="${image_url}">
+                <img src="${modal.image_url}">
             </div>
             <div class="desc_avec">
                 <div class="desc_avec_tit">Avec:</div>
                 <div class="desc_avec_text">
-                   ${actors}
+                   ${modal.actors}
                 </div>
             </div>
 
@@ -90,4 +90,10 @@ async function generateModal(movieId) {
                 Fermer
             </button>
     `;
+
+    const btnCloseModal = modalContainer.querySelector("#btnCloseModal");
+    btnCloseModal.addEventListener("click", () => Toggle_modale());
+
+    const iconCloseModal = modalContainer.querySelector("#iconCloseModal");
+    iconCloseModal.addEventListener("click", () => Toggle_modale());
 }

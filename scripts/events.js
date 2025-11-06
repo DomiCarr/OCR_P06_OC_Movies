@@ -13,9 +13,6 @@
 // --------------------------------------------------
 //
 function listenEvents(genres) {
-    // movie detail button
-    const btnDetails = document.querySelector("#btnDetails");
-    btnDetails.addEventListener("click", () => Toggle_modale());
 
     // close modal button
     const btnCloseModal = document.querySelector("#btnCloseModal");
@@ -48,10 +45,19 @@ function listenEvents(genres) {
         });
     });
 
+    // ----- Best movie detail buttons
+    document.addEventListener("click", (event) => {
+        const btn = event.target.closest(".tuile_bloctexte_button");
+        if (!btn) return;
+        const movieId = btn.dataset.id;
+        if (movieId) Toggle_modale(movieId);
+
+    });
+
     // ----- Dynamic movie detail buttons (inside generated tiles) -----
     // Use event delegation to handle dynamically created tiles
     document.addEventListener("click", (event) => {
-        const btn = event.target.closest(".tuile_bloctexte_button");
+        const btn = event.target.closest(".bf_vignette_desc_bouton");
         if (!btn) return;
         const movieId = btn.dataset.id;
         if (movieId) Toggle_modale(movieId);
