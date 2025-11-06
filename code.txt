@@ -1,4 +1,4 @@
-Generated 2025-11-02 16:57:18
+Generated 2025-11-06 18:01:34
 
 
 
@@ -122,6 +122,7 @@ Generated 2025-11-02 16:57:18
 //
 // Exchange with API_REST functions
 //
+// ==================================================
 
 // --------------------------------------------------
 // Extract genres from API page
@@ -371,6 +372,8 @@ let selectedGenre = "";
 //events.js
 //
 // Manage event listeners for user interactions: button clicks, menu hovers, etc.
+//
+// ==================================================
 
 // --------------------------------------------------
 // Initialize event listeners for UI interactions
@@ -436,6 +439,10 @@ function listenEvents(genres) {
 ===========================================================================================
 // main.js
 //
+// Application entry script
+//
+// ==================================================
+
 // --------------------------------------------------
 // Initialize application
 //
@@ -471,6 +478,13 @@ async function buildPageContent(genres) {
     }
 }
 
+// --------------------------------------------------
+// App entry point
+//
+// input: - none
+// output: - initialized dynamic page
+//
+// --------------------------------------------------
 
 async function initApp() {
     try {
@@ -498,8 +512,9 @@ initApp();
 ===========================================================================================
 // menu.js
 //
-// Functions to handle the genre menu and its interactive behavior
+// Handle the genre menu and its interactive behavior
 //
+// ==================================================
 
 // Genres menu is open or closed
 let menuOuvert = false;
@@ -553,9 +568,16 @@ function generateMenu(genres) {
 // --------------------------------------------------
 //
 function updateSelectedGenre(clickedItem) {
+    // Get the <ul> that contains the genre menu
     const ul = document.getElementById("genres");
+
+    // Select the first <li> item (main displayed genre)
     const firstItem = ul.querySelector("li");
+
+    // Update the visible genre name to the clicked one
     firstItem.textContent = clickedItem.textContent;
+
+    // Store the selected genre globally
     selectedGenre = clickedItem.textContent;
 }
 
@@ -569,24 +591,35 @@ function updateSelectedGenre(clickedItem) {
 // --------------------------------------------------
 //
 function menuDisplay(show, genres) {
+    // Get all genre items from the menu
     const menuItems = document.querySelectorAll("#genres li");
     if (menuItems.length <= 1) return;
 
+    // Loop through items (skip first) and show/hide them
     for (let i = 1; i < menuItems.length; i++) {
         menuItems[i].style.display = show ? "block" : "none";
+
+        // Remove checkmark emoji from the previously selected genre
         menuItems[i].textContent = menuItems[i].textContent.replace(" ✅", "");
+
+        // Add checkmark emoji for the currently selected genre
         if (show && menuItems[i].textContent === selectedGenre) {
             menuItems[i].textContent = selectedGenre + " ✅";
         }
     }
 
+    // Update first item text based on menu state
     const firstItem = menuItems[0];
     if (show) {
+        // Show the first genre name when menu opens
         firstItem.textContent = genres[0].name;
+
+        // Add emoji if it's the selected one
         if (selectedGenre === genres[0].name) {
             firstItem.textContent = selectedGenre + " ✅";
         }
     } else {
+        // Hide menu and show only the selected genre
         firstItem.textContent = selectedGenre;
     }
 }
@@ -601,23 +634,34 @@ function menuDisplay(show, genres) {
 // --------------------------------------------------
 //
 function manageMenu(genres) {
+    // Select the genre menu container element
     const menu = document.querySelector(".bf_menu");
     if (!menu) return;
 
+    // Show full menu when hovering
     menu.addEventListener("mouseenter", () => {
         menuOuvert = true;
         const ul = document.getElementById("genres");
         const firstItem = ul.querySelector("li");
+
+        // Replace the top menu item text (selected genre) with first genre name (default genre list)
         firstItem.textContent = genres[0].name;
         menuDisplay(true, genres);
     });
 
+    // Hide menu when mouse leaves the area and display the current selected genre
     menu.addEventListener("mouseleave", () => {
         menuOuvert = false;
         const ul = document.getElementById("genres");
         const firstItem = ul.querySelector("li");
+
+        // Restore the selected genre textin the top menu item
         firstItem.textContent = selectedGenre;
         menuDisplay(false, genres);
+
+        // rebuild the movies mosaik with the new genre
+        // ----- Others Mosaik -----
+        rebuildOthers(selectedGenre);
     });
 }
 
@@ -628,6 +672,9 @@ function manageMenu(genres) {
 ===========================================================================================
 // modal.js
 //
+// Manage Modal Display
+//
+// ==================================================
 
 // --------------------------------------------------
 // Toggle modal display
@@ -649,6 +696,10 @@ function Toggle_modale() {
 ===========================================================================================
 // tiles.js
 //
+// Generate the page tiles
+//
+// =======================================================================
+
 // --------------------------------------------------
 // Generate tiles HTML for a given category and list of movies
 //
@@ -664,9 +715,6 @@ function generateTiles(categoryName, movies) {
         console.warn("No bloc found for category:", categoryName);
         return;
     }
-
-    // Update the title of the existing bloc
-    const titleElem = bloc.querySelector(".bf_titre");
 
     // Get container for tiles
     const tuilesContainer = bloc.querySelector(".tuiles");
@@ -729,6 +777,12 @@ function generateBestMovie(movie) {
     `;
 }
 
+async function rebuildOthers(selectedGenre) {
+    // rebuild the movies mosaik with the new genre
+    // ----- Others Mosaik -----
+    const moviesOthers = await extractBestMoviesByGenre(selectedGenre);
+    generateTiles("others", moviesOthers);
+}
 
 
 

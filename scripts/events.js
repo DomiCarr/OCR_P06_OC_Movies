@@ -1,6 +1,8 @@
 //events.js
 //
 // Manage event listeners for user interactions: button clicks, menu hovers, etc.
+//
+// ==================================================
 
 // --------------------------------------------------
 // Initialize event listeners for UI interactions

@@ -2,6 +2,7 @@
 //
 // Handle the genre menu and its interactive behavior
 //
+// ==================================================
 
 // Genres menu is open or closed
 let menuOuvert = false;
@@ -55,9 +56,16 @@ function generateMenu(genres) {
 // --------------------------------------------------
 //
 function updateSelectedGenre(clickedItem) {
+    // Get the <ul> that contains the genre menu
     const ul = document.getElementById("genres");
+
+    // Select the first <li> item (main displayed genre)
     const firstItem = ul.querySelector("li");
+
+    // Update the visible genre name to the clicked one
     firstItem.textContent = clickedItem.textContent;
+
+    // Store the selected genre globally
     selectedGenre = clickedItem.textContent;
 }
 
@@ -71,24 +79,35 @@ function updateSelectedGenre(clickedItem) {
 // --------------------------------------------------
 //
 function menuDisplay(show, genres) {
+    // Get all genre items from the menu
     const menuItems = document.querySelectorAll("#genres li");
     if (menuItems.length <= 1) return;
 
+    // Loop through items (skip first) and show/hide them
     for (let i = 1; i < menuItems.length; i++) {
         menuItems[i].style.display = show ? "block" : "none";
+
+        // Remove checkmark emoji from the previously selected genre
         menuItems[i].textContent = menuItems[i].textContent.replace(" ✅", "");
+
+        // Add checkmark emoji for the currently selected genre
         if (show && menuItems[i].textContent === selectedGenre) {
             menuItems[i].textContent = selectedGenre + " ✅";
         }
     }
 
+    // Update first item text based on menu state
     const firstItem = menuItems[0];
     if (show) {
+        // Show the first genre name when menu opens
         firstItem.textContent = genres[0].name;
+
+        // Add emoji if it's the selected one
         if (selectedGenre === genres[0].name) {
             firstItem.textContent = selectedGenre + " ✅";
         }
     } else {
+        // Hide menu and show only the selected genre
         firstItem.textContent = selectedGenre;
     }
 }
@@ -103,22 +122,33 @@ function menuDisplay(show, genres) {
 // --------------------------------------------------
 //
 function manageMenu(genres) {
+    // Select the genre menu container element
     const menu = document.querySelector(".bf_menu");
     if (!menu) return;
 
+    // Show full menu when hovering
     menu.addEventListener("mouseenter", () => {
         menuOuvert = true;
         const ul = document.getElementById("genres");
         const firstItem = ul.querySelector("li");
+
+        // Replace the top menu item text (selected genre) with first genre name (default genre list)
         firstItem.textContent = genres[0].name;
         menuDisplay(true, genres);
     });
 
+    // Hide menu when mouse leaves the area and display the current selected genre
     menu.addEventListener("mouseleave", () => {
         menuOuvert = false;
         const ul = document.getElementById("genres");
         const firstItem = ul.querySelector("li");
+
+        // Restore the selected genre textin the top menu item
         firstItem.textContent = selectedGenre;
         menuDisplay(false, genres);
+
+        // rebuild the movies mosaik with the new genre
+        // ----- Others Mosaik -----
+        rebuildOthers(selectedGenre);
     });
 }

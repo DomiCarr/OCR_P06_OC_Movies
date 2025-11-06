@@ -1,5 +1,9 @@
 // main.js
 //
+// Application entry script
+//
+// ==================================================
+
 // --------------------------------------------------
 // Initialize application
 //
@@ -35,6 +39,13 @@ async function buildPageContent(genres) {
     }
 }
 
+// --------------------------------------------------
+// App entry point
+//
+// input: - none
+// output: - initialized dynamic page
+//
+// --------------------------------------------------
 
 async function initApp() {
     try {

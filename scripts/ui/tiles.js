@@ -1,5 +1,9 @@
 // tiles.js
 //
+// Generate the page tiles
+//
+// =======================================================================
+
 // --------------------------------------------------
 // Generate tiles HTML for a given category and list of movies
 //
@@ -15,9 +19,6 @@ function generateTiles(categoryName, movies) {
         console.warn("No bloc found for category:", categoryName);
         return;
     }
-
-    // Update the title of the existing bloc
-    const titleElem = bloc.querySelector(".bf_titre");
 
     // Get container for tiles
     const tuilesContainer = bloc.querySelector(".tuiles");
@@ -80,3 +81,9 @@ function generateBestMovie(movie) {
     `;
 }
 
+async function rebuildOthers(selectedGenre) {
+    // rebuild the movies mosaik with the new genre
+    // ----- Others Mosaik -----
+    const moviesOthers = await extractBestMoviesByGenre(selectedGenre);
+    generateTiles("others", moviesOthers);
+}

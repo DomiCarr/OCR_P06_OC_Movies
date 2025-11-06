@@ -167,6 +167,23 @@
         gap: 20px;
     }
 
+    .tuile_pic {
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        /* force un carré */
+        overflow: hidden;
+        /* cache ce qui dépasse */
+    }
+
+    .tuile_pic img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        /* remplit la div sans déformation */
+        display: block;
+    }
+
+
     .tuile_1,
     .tuile_2 {
         position: relative;
