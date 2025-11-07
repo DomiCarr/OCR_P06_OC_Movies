@@ -69,26 +69,25 @@ async function generateModal(movieId) {
                 <div class="modal_desktop_pic">
                     <img src="${modal.image_url}">
                 </div>
-                <button id="iconCloseModal" class="icon_close_modal">
-                    X
-                </button>
-            </div>
-            <div class="desc_text">
-                ${modal.description}
-            </div>
-            <div class="modal_tab_mob_pic">
-                <img src="${modal.image_url}">
-            </div>
-            <div class="desc_avec">
-                <div class="desc_avec_tit">Avec:</div>
-                <div class="desc_avec_text">
-                   ${modal.actors}
+                <button id="iconCloseModal" class="icon_close_modal">X</button>
                 </div>
+                <div class="desc_text">
+                    ${modal.description}
+                </div>
+                <div class="modal_tab_mob_pic">
+                    <img src="${modal.image_url}">
+                </div>
+                <div class="desc_avec">
+                    <div class="desc_avec_tit">Avec:</div>
+                    <div class="desc_avec_text">
+                    ${modal.actors}
+                    </div>
             </div>
 
             <button id="btnCloseModal" class="btn_close_modal">
                 Fermer
             </button>
+            </div>
     `;
 
     const btnCloseModal = modalContainer.querySelector("#btnCloseModal");
