@@ -1,10 +1,8 @@
-Generated 2025-11-06 19:42:35
+Generated 2025-11-08 17:14:39
 
 
 
-===========================================================================================
-   index.html
-===========================================================================================
+===== index.html =====
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -113,6 +111,1142 @@ Generated 2025-11-06 19:42:35
 </body>
 
 </html>
+
+
+===== style/ocmovies_desktop.css =====
+/* Desktop (789px → ) */
+@media (min-width: 1001px) {
+
+    /* --------------------------- */
+    /* Reinitialisation navigateur */
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        list-style: none;
+        text-decoration: none;
+    }
+
+    button {
+        border: none;
+        box-shadow: none;
+        outline: none;
+        background: none;
+    }
+
+    /* --------------------------- */
+
+    body {
+        margin-top: 60px;
+        margin-left: 100px;
+        margin-right: 100px;
+        background-color: bisque;
+    }
+
+    header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        background-color: #61787F;
+    }
+
+    .header_pic {
+        margin: 15px;
+    }
+
+    .header_text {
+        margin-left: 40px;
+        font-family: "Oswald", sans-serif;
+        color: white;
+        font-size: 40px;
+        /* Light */
+        font-weight: 300;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .bloc_film {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .bf_titre_autre {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        position: relative;
+    }
+
+    .bf_menu {
+        position: absolute;
+        top: 40px;
+        left: 160px;
+        z-index: 10;
+        color: black;
+        font-size: 32px;
+        /* Semi-bold */
+        font-weight: 600;
+        background-color: white;
+    }
+
+    .bf_menu li {
+        border: 1px solid black;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .bf_menu ul li:not(:first-child) {
+        display: none;
+    }
+
+    .bf_menu:hover ul li {
+        display: block;
+    }
+
+    /* Effet survol */
+    .bf_menu li:hover {
+        background-color: #f2f2f2;
+    }
+
+    .selected_category {
+        background-color: #FA0B0B;
+        color: white;
+    }
+
+    .bf_titre,
+    .bf_vignette_desc_titre {
+        font-family: "Oswald", sans-serif;
+        color: black;
+        font-size: 48px;
+        /* Semi-bold */
+        font-weight: 600;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .bf_vignette {
+        padding: 10px;
+        display: flex;
+        flex-direction: row;
+        border-style: solid;
+        border-color: black;
+        border-width: 5px;
+    }
+
+    .bf_vignette_desc {
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .bf_vignette_desc_texte {
+        align-self: center;
+        font-family: "Oswald", sans-serif;
+        color: black;
+        font-size: 28px;
+        /* ExtraLight */
+        font-weight: 200;
+    }
+
+    .bf_vignette_desc_bouton {
+        margin-left: auto;
+        background-color: #FA0B0B;
+        border-radius: 25px;
+        padding-left: 50px;
+        padding-right: 50px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        font-family: "Oswald", sans-serif;
+        color: white;
+        font-size: 24px;
+        /* Medium */
+        font-weight: 500;
+    }
+
+    .bf_mosaik {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .tuiles {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: flex-start;
+    }
+
+    .tuile_pic {
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        /* force un carré */
+        overflow: hidden;
+        /* cache ce qui dépasse */
+    }
+
+    .tuile_pic img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        /* remplit la div sans déformation */
+        display: block;
+    }
+
+    .tuile_1,
+    .tuile_2,
+    .tuile_3 {
+        position: relative;
+        height: 252px;
+        width: 247px;
+        background-color: gainsboro;
+    }
+
+    .bf_voir_plus_bouton {
+        display: none;
+    }
+
+    .tuile_bloctexte {
+        background-color: rgba(0, 0, 0, 0.5);
+        position: absolute;
+        left: 0;
+        top: 40px;
+        padding: 15px;
+        height: 120px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .tuile_bloctexte_texte {
+        font-family: "Oswald", sans-serif;
+        color: white;
+        /* Semi-bold */
+        font-size: 24px;
+        font-weight: 600;
+        align-self: flex-start;
+    }
+
+    .tuile_bloctexte_button {
+        font-family: "Oswald", sans-serif;
+        color: white;
+        font-size: 14px;
+        /* Medium */
+        font-weight: 500;
+        background-color: black;
+        border-radius: 25px;
+        padding: 5px;
+        align-self: flex-end;
+    }
+
+    /* -------------- MODALE ------------- */
+
+    .modale {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.9);
+        padding: 50px;
+        z-index: 9999;
+    }
+
+
+    .hidden_modale {
+        display: none;
+    }
+
+    .content {
+        background-color: bisque;
+        padding: 20px;
+        border-style: solid;
+        border-color: black;
+        font-family: "Oswald", sans-serif;
+        color: black;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .top {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .modal_desktop_pic {
+        padding: 20px;
+    }
+
+    .icon_close_modal {
+        display: none;
+    }
+
+    .modal_tab_mob_pic {
+        display: none;
+    }
+
+    .top_text {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .top_real {
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+
+    .top_info_tit {
+        font-size: 48px;
+        /* Semi-bold */
+        font-weight: 600;
+    }
+
+    .top_info_text {
+        font-size: 24px;
+        /* Semi-bold */
+        font-weight: 600;
+    }
+
+    .top_real_tit {
+        font-size: 24px;
+        /* Regular */
+        font-weight: 400;
+    }
+
+    .top_real_text {
+        font-size: 24px;
+        /* Light */
+        font-weight: 300;
+    }
+
+    .desc_text {
+        font-size: 24px;
+        /* Light */
+        font-weight: 300;
+    }
+
+    .desc_avec_tit {
+        font-size: 20px;
+        /* Regular */
+        font-weight: 400;
+    }
+
+    .desc_avec_text {
+        font-size: 20px;
+        /* Light */
+        font-weight: 300;
+        padding-bottom: 30px;
+    }
+
+    .btn_close_modal {
+        margin-left: auto;
+        margin-right: auto;
+        background-color: #FA0B0B;
+        border-color: #FA0B0B;
+        border-radius: 25px;
+        padding-left: 80px;
+        padding-right: 80px;
+        padding-top: 3px;
+        padding-bottom: 3px;
+        font-family: "Oswald", sans-serif;
+        color: white;
+        font-size: 20px;
+        /* Medium */
+        font-weight: 500;
+    }
+
+}
+
+
+===== style/ocmovies_mobil.css =====
+/* Desktop (789px → ) */
+@media (max-width: 849px) {
+
+    /* --------------------------- */
+    /* Reinitialisation navigateur */
+    /* --------------------------- */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        list-style: none;
+        text-decoration: none;
+    }
+
+    button {
+        border: none;
+        box-shadow: none;
+        outline: none;
+        background: none;
+    }
+
+    /* --------------------------- */
+
+    body {
+        margin-top: 60px;
+        margin-left: 30px;
+        margin-right: 30px;
+        border-style: solid;
+        border-color: black;
+        background-color: rgb(200, 239, 239);
+    }
+
+    header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        background-color: #61787F;
+    }
+
+    .header_pic {
+        margin: 15px;
+    }
+
+    .header_text {
+        display: none;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .bloc_film {
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+
+    .bf_titre_autre {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        padding-bottom: 100px;
+    }
+
+    .bf_menu {
+        position: absolute;
+        top: 50px;
+        z-index: 10;
+        color: black;
+        font-size: 32px;
+        /* Semi-bold */
+        font-weight: 600;
+        background-color: white;
+        width: 300px;
+    }
+
+    .bf_menu li {
+        border: 1px solid black;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .bf_menu ul li:not(:first-child) {
+        display: none;
+    }
+
+    .bf_menu:hover ul li {
+        display: block;
+    }
+
+    /* Effet survol */
+    .bf_menu li:hover {
+        background-color: #f2f2f2;
+    }
+
+    .bf_titre,
+    .bf_vignette_desc_titre {
+        font-family: "Oswald", sans-serif;
+        color: black;
+        font-size: 32px;
+        /* Semi-bold */
+        font-weight: 600;
+    }
+
+    .bf_vignette {
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        border-style: solid;
+        border-color: black;
+        border-width: 5px;
+    }
+
+    .bf_vignette_pic {
+        width: 100%;
+        height: 300px;
+        overflow: hidden;
+    }
+
+    .bf_vignette_pic img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .bf_vignette_desc {
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .bf_vignette_desc_texte {
+        align-self: center;
+        font-family: "Oswald", sans-serif;
+        color: black;
+        font-size: 28px;
+        /* ExtraLight */
+        font-weight: 200;
+    }
+
+    .bf_vignette_desc_bouton {
+        margin-left: auto;
+        margin-right: auto;
+        background-color: #FA0B0B;
+        border-radius: 25px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        font-family: "Oswald", sans-serif;
+        color: white;
+        font-size: 14px;
+        /* Medium */
+        font-weight: 500;
+    }
+
+    /* mosaik */
+
+    .bf_mosaik {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%
+    }
+
+    .tuiles {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        width: 100%;
+    }
+
+    .tuile_pic {
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        /* force un carré */
+        overflow: hidden;
+        /* cache ce qui dépasse */
+    }
+
+    .tuile_pic img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        /* remplit la div sans déformation */
+        display: block;
+    }
+
+
+    .tuile_1 {
+        position: relative;
+        height: 295px;
+        width: 286px;
+    }
+
+    .tuile_2,
+    .tuile_3 {
+        display: none;
+    }
+
+    .show_all_tiles .tuile_2,
+    .show_all_tiles .tuile_3 {
+        display: flex;
+        height: 295px;
+        width: 286px;
+    }
+
+    .tuile_bloctexte {
+        background-color: rgba(0, 0, 0, 0.5);
+        position: absolute;
+        left: 0;
+        top: 40px;
+        padding: 15px;
+        height: 120px;
+        width: 251px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .tuile_bloctexte_texte {
+        font-family: "Oswald", sans-serif;
+        color: white;
+        /* Semi-bold */
+        font-size: 24px;
+        font-weight: 600;
+        align-self: flex-start;
+    }
+
+    .tuile_bloctexte_button {
+        font-family: "Oswald", sans-serif;
+        color: white;
+        font-size: 14px;
+        /* Medium */
+        font-weight: 500;
+        background-color: black;
+        border-radius: 25px;
+        padding: 5px;
+        align-self: flex-end;
+    }
+
+    .bf_voir_plus_bouton {
+        background-color: #FA0B0B;
+        border-radius: 25px;
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        font-family: "Oswald", sans-serif;
+        color: white;
+        font-size: 14px;
+        /* Medium */
+        font-weight: 500;
+    }
+
+    /* -------------- MODALE ------------- */
+
+    .modale {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.9);
+        padding: 50px;
+        z-index: 9999;
+    }
+
+    .hidden_modale {
+        display: none;
+    }
+
+    .content {
+        background-color: rgb(200, 239, 239);
+        padding: 20px;
+        border-style: solid;
+        border-color: black;
+        font-family: "Oswald", sans-serif;
+        color: black;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .top {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .icon_close_modal {
+        padding: 20px;
+        color: #FA0B0B;
+        font-family: "Oswald", sans-serif;
+        font-size: 32px;
+        /* Medium */
+        font-weight: 500;
+    }
+
+    .modal_desktop_pic {
+        display: none;
+    }
+
+    .modal_tab_mob_pic {
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .modal_tab_mob_pic img {
+        width: 100%;
+        height: auto;
+    }
+
+
+    .header_pic {
+        margin: 15px;
+    }
+
+    .top_text {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .top_real {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+
+    .top_info_tit {
+        font-size: 48px;
+        /* Semi-bold */
+        font-weight: 600;
+    }
+
+    .top_info_text {
+        font-size: 24px;
+        /* Semi-bold */
+        font-weight: 600;
+    }
+
+    .top_real_tit {
+        font-size: 24px;
+        /* Regular */
+        font-weight: 400;
+    }
+
+    .top_real_text {
+        font-size: 24px;
+        /* Light */
+        font-weight: 300;
+    }
+
+    .desc_text {
+        padding: 20px;
+        font-size: 24px;
+        /* Light */
+        font-weight: 300;
+    }
+
+    .desc_avec {
+        padding: 20px;
+    }
+
+    .desc_avec_tit {
+        font-size: 20px;
+        /* Regular */
+        font-weight: 400;
+    }
+
+    .desc_avec_text {
+        font-size: 20px;
+        /* Light */
+        font-weight: 300;
+    }
+
+    .btn_close_modal {
+        display: none;
+    }
+
+}
+
+
+===== style/ocmovies_tablet.css =====
+/* Desktop (789px → ) */
+@media (min-width: 850px) and (max-width:1000px) {
+
+    /* --------------------------- */
+    /* Reinitialisation navigateur */
+    /* --------------------------- */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        list-style: none;
+        text-decoration: none;
+    }
+
+    button {
+        border: none;
+        box-shadow: none;
+        outline: none;
+        background: none;
+    }
+
+    /* --------------------------- */
+
+    body {
+        width: 620;
+        margin-top: 60px;
+        margin-left: 110px;
+        margin-right: 110px;
+        background-color: seagreen;
+    }
+
+    header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        background-color: #61787F;
+    }
+
+    .header_pic {
+        margin: 15px;
+    }
+
+    .header_text {
+        margin-left: 40px;
+        font-family: "Oswald", sans-serif;
+        color: white;
+        font-size: 40px;
+        /* Light */
+        font-weight: 300;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .bloc_film {
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    .bf_titre_autre {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        position: relative;
+    }
+
+    .bf_menu {
+        position: absolute;
+        top: 40px;
+        left: 160px;
+        z-index: 10;
+        color: black;
+        font-size: 32px;
+        /* Semi-bold */
+        font-weight: 600;
+        background-color: white;
+    }
+
+    .bf_menu li {
+        border: 1px solid black;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .bf_menu ul li:not(:first-child) {
+        display: none;
+    }
+
+    .bf_menu:hover ul li {
+        display: block;
+    }
+
+    /* Effet survol */
+    .bf_menu li:hover {
+        background-color: #f2f2f2;
+    }
+
+
+
+    .bf_titre,
+    .bf_vignette_desc_titre {
+        font-family: "Oswald", sans-serif;
+        color: black;
+        font-size: 40px;
+        /* Semi-bold */
+        font-weight: 600;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+
+    .bf_vignette {
+        padding: 10px;
+        display: flex;
+        flex-direction: row;
+        border-style: solid;
+        border-color: black;
+        border-width: 5px;
+    }
+
+    .bf_vignette_desc {
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .bf_vignette_desc_texte {
+        align-self: center;
+        font-family: "Oswald", sans-serif;
+        color: black;
+        font-size: 28px;
+        /* ExtraLight */
+        font-weight: 200;
+    }
+
+    .bf_vignette_desc_bouton {
+        margin-left: auto;
+        background-color: #FA0B0B;
+        border-radius: 22px;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        font-family: "Oswald", sans-serif;
+        color: white;
+        font-size: 20px;
+        /* Medium */
+        font-weight: 500;
+    }
+
+    .bf_mosaik {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%
+    }
+
+    .tuiles {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+    .tuile_pic {
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        /* force un carré */
+        overflow: hidden;
+        /* cache ce qui dépasse */
+    }
+
+    .tuile_pic img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        /* remplit la div sans déformation */
+        display: block;
+    }
+
+
+    .tuile_1,
+    .tuile_2 {
+        position: relative;
+        height: 295px;
+        width: 286px;
+    }
+
+    .tuile_3 {
+        display: none;
+    }
+
+    .show_all_tiles .tuile_3 {
+        display: flex;
+        height: 295px;
+        width: 286px;
+    }
+
+
+    .tuile_bloctexte {
+        background-color: rgba(0, 0, 0, 0.5);
+        position: absolute;
+        left: 0;
+        top: 40px;
+        padding: 15px;
+        height: 120px;
+        width: 251px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .tuile_bloctexte_texte {
+        font-family: "Oswald", sans-serif;
+        color: white;
+        /* Semi-bold */
+        font-size: 24px;
+        font-weight: 600;
+        align-self: flex-start;
+    }
+
+    .tuile_bloctexte_button {
+        font-family: "Oswald", sans-serif;
+        color: white;
+        font-size: 14px;
+        /* Medium */
+        font-weight: 500;
+        background-color: black;
+        border-radius: 25px;
+        padding: 5px;
+        align-self: flex-end;
+    }
+
+    .bf_voir_plus_bouton {
+        background-color: #FA0B0B;
+        border-radius: 22px;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        font-family: "Oswald", sans-serif;
+        color: white;
+        font-size: 20px;
+        /* Medium */
+        font-weight: 500;
+    }
+
+    /* -------------- MODALE ------------- */
+
+    .modale {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.9);
+        padding: 50px;
+        z-index: 9999;
+    }
+
+
+    .hidden_modale {
+        display: none;
+    }
+
+    .content {
+        background-color: seagreen;
+        padding: 20px;
+        border-style: solid;
+        border-color: black;
+        font-family: "Oswald", sans-serif;
+        color: black;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .top {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .icon_close_modal {
+        padding: 20px;
+        color: #FA0B0B;
+        font-family: "Oswald", sans-serif;
+        font-size: 32px;
+        /* Medium */
+        font-weight: 500;
+    }
+
+    .modal_desktop_pic {
+        display: none;
+    }
+
+    .modal_tab_mob_pic {
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .modal_tab_mob_pic img {
+        width: 100%;
+        height: auto;
+    }
+
+    .top_text {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .top_real {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+
+    .top_info_tit {
+        font-size: 48px;
+        /* Semi-bold */
+        font-weight: 600;
+    }
+
+    .top_info_text {
+        font-size: 24px;
+        /* Semi-bold */
+        font-weight: 600;
+    }
+
+    .top_real_tit {
+        font-size: 24px;
+        /* Regular */
+        font-weight: 400;
+    }
+
+    .top_real_text {
+        font-size: 24px;
+        /* Light */
+        font-weight: 300;
+    }
+
+    .desc_text {
+        padding: 20px;
+        font-size: 24px;
+        /* Light */
+        font-weight: 300;
+    }
+
+    .desc_avec {
+        padding: 20px;
+    }
+
+    .desc_avec_tit {
+        font-size: 20px;
+        /* Regular */
+        font-weight: 400;
+    }
+
+    .desc_avec_text {
+        font-size: 20px;
+        /* Light */
+        font-weight: 300;
+    }
+
+    .btn_close_modal {
+        display: none;
+    }
+
+
+}
 
 
 ===========================================================================================
@@ -400,9 +1534,6 @@ let selectedGenre = "";
 // --------------------------------------------------
 //
 function listenEvents(genres) {
-    // movie detail button
-    const btnDetails = document.querySelector("#btnDetails");
-    btnDetails.addEventListener("click", () => Toggle_modale(movieId));
 
     // close modal button
     const btnCloseModal = document.querySelector("#btnCloseModal");
@@ -435,10 +1566,19 @@ function listenEvents(genres) {
         });
     });
 
+    // ----- Best movie detail buttons
+    document.addEventListener("click", (event) => {
+        const btn = event.target.closest(".tuile_bloctexte_button");
+        if (!btn) return;
+        const movieId = btn.dataset.id;
+        if (movieId) Toggle_modale(movieId);
+
+    });
+
     // ----- Dynamic movie detail buttons (inside generated tiles) -----
     // Use event delegation to handle dynamically created tiles
     document.addEventListener("click", (event) => {
-        const btn = event.target.closest(".tuile_bloctexte_button");
+        const btn = event.target.closest(".bf_vignette_desc_bouton");
         if (!btn) return;
         const movieId = btn.dataset.id;
         if (movieId) Toggle_modale(movieId);
@@ -730,7 +1870,7 @@ async function generateModal(movieId) {
     const modal = await getMovieDetails(movieId);
     console.log("REST API modal:", modal)
 
-    const modalContainer = document.querySelector("content")
+    const modalContainer = document.querySelector("#modale .content")
     modalContainer.innerHTML = `
             <div class="top">
                 <div class="top_text">
@@ -741,7 +1881,7 @@ async function generateModal(movieId) {
                         <div class="top_info_text">
                             <p>${modal.year} - ${modal.genres}</p>
                             <p>PG-13 - ${modal.duration} minutes (${modal.title} / ${modal.title})</p>
-                            <p>IMDB score: ${imbd_score}/10</p>
+                            <p>IMDB score: ${modal.imdb_score}/10</p>
                             <p>Recettes au box-office: $${modal.worldwide_gross_income / 1000000}</p>
                         </div>
                     </div>
@@ -757,27 +1897,32 @@ async function generateModal(movieId) {
                 <div class="modal_desktop_pic">
                     <img src="${modal.image_url}">
                 </div>
-                <button id="iconCloseModal" class="icon_close_modal">
-                    X
-                </button>
-            </div>
-            <div class="desc_text">
-                ${modal.description}
-            </div>
-            <div class="modal_tab_mob_pic">
-                <img src="${modal.image_url}">
-            </div>
-            <div class="desc_avec">
-                <div class="desc_avec_tit">Avec:</div>
-                <div class="desc_avec_text">
-                   ${modal.actors}
+                <button id="iconCloseModal" class="icon_close_modal">X</button>
                 </div>
+                <div class="desc_text">
+                    ${modal.description}
+                </div>
+                <div class="modal_tab_mob_pic">
+                    <img src="${modal.image_url}">
+                </div>
+                <div class="desc_avec">
+                    <div class="desc_avec_tit">Avec:</div>
+                    <div class="desc_avec_text">
+                    ${modal.actors}
+                    </div>
             </div>
 
             <button id="btnCloseModal" class="btn_close_modal">
                 Fermer
             </button>
+            </div>
     `;
+
+    const btnCloseModal = modalContainer.querySelector("#btnCloseModal");
+    btnCloseModal.addEventListener("click", () => Toggle_modale());
+
+    const iconCloseModal = modalContainer.querySelector("#iconCloseModal");
+    iconCloseModal.addEventListener("click", () => Toggle_modale());
 }
 
 
